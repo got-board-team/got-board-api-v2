@@ -1,4 +1,4 @@
-require_relative 'boot'
+require_relative "boot"
 
 require "rails"
 # Pick the frameworks you want:
@@ -13,7 +13,7 @@ require "action_view/railtie"
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
-# you've limited to :test, :development, or :production.
+# you"ve limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
 module GotBoardApiV2
@@ -31,5 +31,12 @@ module GotBoardApiV2
     config.api_only = true
 
     ActiveModelSerializers.config.adapter = :json_api # Default: `:attributes`
+
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins "*"
+        resource "*", headers: :any, methods: %i[get post options]
+      end
+    end
   end
 end
