@@ -1,24 +1,38 @@
-# README
+## Setup
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. Clone the repository:
 
-Things you may want to cover:
+```
+  git clone git@github.com:got-board-team/got-board-api-v2.git
+```
 
-* Ruby version
+2. Install Ruby 2.4.1 and bundler gem
 
-* System dependencies
+3. Install all gems
+```
+bundle install
+```
 
-* Configuration
+4. Copy the example environment file and set the relevant values
 
-* Database creation
+```
+  cp .env.example .env
+```
 
-* Database initialization
+5. Install Docker
 
-* How to run the test suite
+6.  With `Docker` installed, run:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+  docker-compose up
+```
 
-* Deployment instructions
+This will download, install, configure and run all external dependencies
 
-* ...
+7. Setup the database
+
+```
+  rails db:setup
+```
+
+8. Voilá

@@ -22,12 +22,12 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
   host: <%= ENV['DATABASE_HOST'] %>
-  username: <%= ENV['DATABASE_USERNAME'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  username: gotboard
+  password: 
 
 development:
   <<: *default
-  database: <%= ENV['DATABASE_NAME'] %>
+  database: gotboard2_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -84,5 +84,5 @@ test:
 #
 production:
   <<: *default
-  database: <%= ENV['DATABASE_NAME'] %>
+  database: gotboard_production
   pool: 10
