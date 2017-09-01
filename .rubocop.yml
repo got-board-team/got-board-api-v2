@@ -1,9 +1,9 @@
 AllCops:
   DisplayCopNames: true
   Exclude:
-    - "src/spec/fixtures/**/*"
-    - "src/db/schema.rb"
-    - "src/db/migrate/*"
+    - "spec/fixtures/**/*"
+    - "db/schema.rb"
+    - "db/migrate/*"
 
 Metrics/LineLength:
   StyleGuide: "https://github.com/bbatsov/ruby-style-guide#80-character-limits"
