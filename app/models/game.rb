@@ -3,7 +3,6 @@ class Game < ApplicationRecord
   # Create Player resource
   has_many :players
 
-  # @todo Spec
   def territories
     @territories ||= fetch_territories
   end
@@ -11,15 +10,13 @@ class Game < ApplicationRecord
   private
 
   def fetch_territories
-    map_file_path = 'app/game_data/map_areas.yml'
+    map_file_path = "app/game_data/map_areas.yml"
     map_file = YAML.load_file(File.join(Rails.root, map_file_path))
-    map_file.with_indifferent_access['map_areas'].map do |territory_data|
+    map_file.with_indifferent_access["map_areas"].map do |territory_data|
       Territory.new(self).tap do |territory|
-        territory.assign_attributes(
-          id: territory_data[:id],
-          slug: territory_data[:slug],
-          boundaries: territory_data[:boundaries]
-        )
+        territory_data.keys.map do |attr|
+          territory.assign_attributes(attr.to_sym => territory_data[attr])
+        end
       end
     end
   end
