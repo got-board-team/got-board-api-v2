@@ -38,3 +38,21 @@ This will download, install, configure and run all external dependencies
 ```
 
 8. Voilá
+
+## Deployment
+
+To deploy the application to Heroku, make sure everything is committed and pushed to the desired branch. Ideally you want to push the `master` branch to the `heroku` remote. To do so, run:
+
+```
+git push heroku master
+```
+
+If for some reason you want to push a non-master branch to heroku, such as `other_branch`, use:
+
+```
+git push heroku other_branch:master
+```
+
+Remember to run any pending migrations afterwards.
+
+If you don't have the Heroku CLI installed, check the [official instructions](https://devcenter.heroku.com/articles/heroku-cli)
