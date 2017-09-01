@@ -55,7 +55,7 @@ git push heroku other_branch:master
 
 Remember to run any pending migrations afterwards.
 
-## Connecting to the server
+## Connecting to the server instance
 
 If you don't have the Heroku CLI installed, check the [official instructions](https://devcenter.heroku.com/articles/heroku-cli)
 
@@ -70,7 +70,7 @@ To run migrations:
 heroku run rails db:migrate
 ```
 
-For other commands, just follow the structure `heroku run YOUR COMMAND HERE`. Some examples below:
+For other commands, just follow the structure `heroku run YOUR COMMAND HERE`. More examples below:
 
 ```
 heroku run bash
