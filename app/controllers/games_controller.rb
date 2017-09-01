@@ -2,7 +2,7 @@ class GamesController < ApplicationController
   before_action :find_game, only: :show
 
   def show
-    render json: @game
+    render json: @game, include: [params[:include]]
   end
 
   private

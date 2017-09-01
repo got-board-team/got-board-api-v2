@@ -1,6 +1,11 @@
 class TerritorySerializer < ActiveModel::Serializer
-  attributes :id, :slug, :path
-  has_many :units
-  has_many :order_tokens
-  has_many :power_tokens
+  attributes :id,
+             :slug,
+             :boundaries,
+             :type,
+             :fortification_type,
+             :supply_icons,
+             :power_icons,
+             :house_sigil,
+             :names
 end

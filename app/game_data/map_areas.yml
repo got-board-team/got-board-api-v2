@@ -3,8 +3,8 @@ map_areas:
 - slug: bay_of_ice
   type: Sea
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: Bay of Ice
@@ -67,8 +67,8 @@ map_areas:
 - slug: sunset_sea
   type: Sea
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: Sunset Sea
@@ -96,8 +96,8 @@ map_areas:
 - slug: ironmans_bay
   type: Sea
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: Ironman's Bay
@@ -130,8 +130,8 @@ map_areas:
 - slug: the_golden_sound
   type: Sea
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: The Golden Sound
@@ -156,8 +156,8 @@ map_areas:
 - slug: west_summer_sea
   type: Sea
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: West Summer Sea
@@ -186,8 +186,8 @@ map_areas:
 - slug: redwyne_straights
   type: Sea
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: Redwyne Straights
@@ -221,8 +221,8 @@ map_areas:
 - slug: east_summer_sea
   type: Sea
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: East Summer Sea
@@ -256,8 +256,8 @@ map_areas:
 - slug: sea_of_dorne
   type: Sea
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: Sea of Dorne
@@ -288,8 +288,8 @@ map_areas:
 - slug: shipbreaker_bay
   type: Sea
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: Shipbreaker Bay
@@ -325,8 +325,8 @@ map_areas:
 - slug: blackwater_bay
   type: Sea
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: Blackwater Bay
@@ -347,8 +347,8 @@ map_areas:
 - slug: the_narrow_sea
   type: Sea
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: The Narrow Sea
@@ -432,8 +432,8 @@ map_areas:
 - slug: the_shivering_sea
   type: Sea
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: The Shivering Sea
@@ -484,8 +484,8 @@ map_areas:
 - slug: castle_black
   type: Land
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 1
+  supply_icons: 0
+  power_icons: 1
   house_sigil: 
   names:
     en: Castle Black
@@ -509,8 +509,8 @@ map_areas:
 - slug: karhold
   type: Land
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 1
+  supply_icons: 0
+  power_icons: 1
   house_sigil: 
   names:
     en: Karhold
@@ -537,8 +537,8 @@ map_areas:
 - slug: winterfell
   type: Land
   fortification_type: stronghold
-  barrels_count: 1
-  crowns_count: 1
+  supply_icons: 1
+  power_icons: 1
   house_sigil: Stark
   names:
     en: Winterfell
@@ -576,8 +576,8 @@ map_areas:
 - slug: port_of_winterfell
   type: Port
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: Port of Winterfell
@@ -589,8 +589,8 @@ map_areas:
 - slug: the_stony_shore
   type: Land
   fortification_type: 
-  barrels_count: 1
-  crowns_count: 0
+  supply_icons: 1
+  power_icons: 0
   house_sigil: 
   names:
     en: The Stony Shore
@@ -620,8 +620,8 @@ map_areas:
 - slug: white_harbor
   type: Land
   fortification_type: castle
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: White Harbor
@@ -644,8 +644,8 @@ map_areas:
 - slug: port_of_white_harbor
   type: Port
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: Port of White Harbor
@@ -657,8 +657,8 @@ map_areas:
 - slug: widows_watch
   type: Land
   fortification_type: 
-  barrels_count: 1
-  crowns_count: 0
+  supply_icons: 1
+  power_icons: 0
   house_sigil: 
   names:
     en: Whidow's Watch
@@ -680,8 +680,8 @@ map_areas:
 - slug: flints_finger
   type: Land
   fortification_type: castle
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: Flint's Finger
@@ -700,8 +700,8 @@ map_areas:
 - slug: greywater_watch
   type: Land
   fortification_type: 
-  barrels_count: 1
-  crowns_count: 0
+  supply_icons: 1
+  power_icons: 0
   house_sigil: 
   names:
     en: Greywater Watch
@@ -718,8 +718,8 @@ map_areas:
 - slug: moat_cailin
   type: Land
   fortification_type: castle
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: Moat Cailin
@@ -742,8 +742,8 @@ map_areas:
 - slug: seagard
   type: Land
   fortification_type: stronghold
-  barrels_count: 1
-  crowns_count: 1
+  supply_icons: 1
+  power_icons: 1
   house_sigil: 
   names:
     en: Seagard
@@ -760,8 +760,8 @@ map_areas:
 - slug: pyke
   type: Land
   fortification_type: stronghold
-  barrels_count: 1
-  crowns_count: 1
+  supply_icons: 1
+  power_icons: 1
   house_sigil: Greyjoy
   names:
     en: Pyke
@@ -774,8 +774,8 @@ map_areas:
 - slug: port_of_pyke
   type: Port
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: Port of Pyke
@@ -787,8 +787,8 @@ map_areas:
 - slug: the_twins
   type: Land
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 1
+  supply_icons: 0
+  power_icons: 1
   house_sigil: 
   names:
     en: The Twins
@@ -807,8 +807,8 @@ map_areas:
 - slug: the_fingers
   type: Land
   fortification_type: 
-  barrels_count: 1
-  crowns_count: 0
+  supply_icons: 1
+  power_icons: 0
   house_sigil: 
   names:
     en: The Fingers
@@ -838,8 +838,8 @@ map_areas:
 - slug: the_mountains_of_the_moon
   type: Land
   fortification_type: 
-  barrels_count: 1
-  crowns_count: 0
+  supply_icons: 1
+  power_icons: 0
   house_sigil: 
   names:
     en: The Mountains of the Moon
@@ -869,8 +869,8 @@ map_areas:
 - slug: the_eyrie
   type: Land
   fortification_type: castle
-  barrels_count: 1
-  crowns_count: 1
+  supply_icons: 1
+  power_icons: 1
   house_sigil: 
   names:
     en: The Eyrie
@@ -891,8 +891,8 @@ map_areas:
 - slug: riverrun
   type: Land
   fortification_type: stronghold
-  barrels_count: 1
-  crowns_count: 1
+  supply_icons: 1
+  power_icons: 1
   house_sigil: 
   names:
     en: Riverrun
@@ -911,8 +911,8 @@ map_areas:
 - slug: lannisport
   type: Land
   fortification_type: stronghold
-  barrels_count: 2
-  crowns_count: 0
+  supply_icons: 2
+  power_icons: 0
   house_sigil: Lannister
   names:
     en: Lannisport
@@ -933,8 +933,8 @@ map_areas:
 - slug: port_of_lannisport
   type: Port
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: Port of Lannisport
@@ -946,8 +946,8 @@ map_areas:
 - slug: harrenhal
   type: Land
   fortification_type: castle
-  barrels_count: 0
-  crowns_count: 1
+  supply_icons: 0
+  power_icons: 1
   house_sigil: 
   names:
     en: Harrenhal
@@ -962,8 +962,8 @@ map_areas:
 - slug: crackclaw_point
   type: Land
   fortification_type: castle
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: Crackclaw Point
@@ -983,8 +983,8 @@ map_areas:
 - slug: stoney_sept
   type: Land
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 1
+  supply_icons: 0
+  power_icons: 1
   house_sigil: 
   names:
     en: Stoney Sept
@@ -1002,8 +1002,8 @@ map_areas:
 - slug: dragonstone
   type: Land
   fortification_type: stronghold
-  barrels_count: 1
-  crowns_count: 1
+  supply_icons: 1
+  power_icons: 1
   house_sigil: Baratheon
   names:
     en: Dragonstone
@@ -1014,8 +1014,8 @@ map_areas:
 - slug: port_of_dragonstone
   type: Port
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: Port of Dragonstone
@@ -1027,8 +1027,8 @@ map_areas:
 - slug: blackwater
   type: Land
   fortification_type: 
-  barrels_count: 2
-  crowns_count: 0
+  supply_icons: 2
+  power_icons: 0
   house_sigil: 
   names:
     en: Blackwater
@@ -1048,8 +1048,8 @@ map_areas:
 - slug: searoad_marches
   type: Land
   fortification_type: 
-  barrels_count: 1
-  crowns_count: 0
+  supply_icons: 1
+  power_icons: 0
   house_sigil: 
   names:
     en: Searoad Marches
@@ -1067,8 +1067,8 @@ map_areas:
 - slug: kings_landing
   type: Land
   fortification_type: stronghold
-  barrels_count: 0
-  crowns_count: 2
+  supply_icons: 0
+  power_icons: 2
   house_sigil: 
   names:
     en: King's Landing
@@ -1085,8 +1085,8 @@ map_areas:
 - slug: kingswood
   type: Land
   fortification_type: 
-  barrels_count: 1
-  crowns_count: 1
+  supply_icons: 1
+  power_icons: 1
   house_sigil: 
   names:
     en: Kingswood
@@ -1107,8 +1107,8 @@ map_areas:
 - slug: the_reach
   type: Land
   fortification_type: castle
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: The Reach
@@ -1128,8 +1128,8 @@ map_areas:
 - slug: highgarden
   type: Land
   fortification_type: stronghold
-  barrels_count: 2
-  crowns_count: 0
+  supply_icons: 2
+  power_icons: 0
   house_sigil: Tyrell
   names:
     en: Highgarden
@@ -1147,8 +1147,8 @@ map_areas:
 - slug: oldtown
   type: Land
   fortification_type: stronghold
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: Oldtown
@@ -1165,8 +1165,8 @@ map_areas:
 - slug: port_of_oldtown
   type: Port
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: Port of Oldtown
@@ -1178,8 +1178,8 @@ map_areas:
 - slug: dornish_marches
   type: Land
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 1
+  supply_icons: 0
+  power_icons: 1
   house_sigil: 
   names:
     en: Dornish Marches
@@ -1195,8 +1195,8 @@ map_areas:
 - slug: the_boneway
   type: Land
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 1
+  supply_icons: 0
+  power_icons: 1
   house_sigil: 
   names:
     en: The Boneway
@@ -1216,8 +1216,8 @@ map_areas:
 - slug: storms_end
   type: Land
   fortification_type: castle
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: Storms End
@@ -1241,8 +1241,8 @@ map_areas:
 - slug: port_of_storms_end
   type: Port
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: Port of Storms End
@@ -1254,8 +1254,8 @@ map_areas:
 - slug: princes_pass
   type: Land
   fortification_type: 
-  barrels_count: 1
-  crowns_count: 1
+  supply_icons: 1
+  power_icons: 1
   house_sigil: 
   names:
     en: Prince's Pass
@@ -1271,8 +1271,8 @@ map_areas:
 - slug: three_towers
   type: Land
   fortification_type: 
-  barrels_count: 1
-  crowns_count: 0
+  supply_icons: 1
+  power_icons: 0
   house_sigil: 
   names:
     en: Three Towers
@@ -1290,8 +1290,8 @@ map_areas:
 - slug: the_arbor
   type: Land
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 1
+  supply_icons: 0
+  power_icons: 1
   house_sigil: 
   names:
     en: The Arbor
@@ -1304,8 +1304,8 @@ map_areas:
 - slug: starfall
   type: Land
   fortification_type: castle
-  barrels_count: 1
-  crowns_count: 0
+  supply_icons: 1
+  power_icons: 0
   house_sigil: 
   names:
     en: Starfall
@@ -1323,8 +1323,8 @@ map_areas:
 - slug: yronwood
   type: Land
   fortification_type: castle
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: Yronwood
@@ -1343,8 +1343,8 @@ map_areas:
 - slug: salt_shore
   type: Land
   fortification_type: 
-  barrels_count: 1
-  crowns_count: 0
+  supply_icons: 1
+  power_icons: 0
   house_sigil: 
   names:
     en: Salt Shore
@@ -1362,8 +1362,8 @@ map_areas:
 - slug: sunspear
   type: Land
   fortification_type: stronghold
-  barrels_count: 1
-  crowns_count: 1
+  supply_icons: 1
+  power_icons: 1
   house_sigil: Martell
   names:
     en: Sunspear
@@ -1381,8 +1381,8 @@ map_areas:
 - slug: port_of_sunspear
   type: Port
   fortification_type: 
-  barrels_count: 0
-  crowns_count: 0
+  supply_icons: 0
+  power_icons: 0
   house_sigil: 
   names:
     en: Port of Sunspear
