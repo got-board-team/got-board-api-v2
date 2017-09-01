@@ -1,9 +1,10 @@
 ## Setup
 
-1. Clone the repository:
+1. Clone the repository and change into it:
 
 ```
   git clone git@github.com:got-board-team/got-board-api-v2.git
+  cd got-board-api-v2
 ```
 
 2. Install Ruby 2.4.1 and bundler gem
@@ -21,7 +22,7 @@ bundle install
 
 5. Install Docker
 
-6.  With `Docker` installed, run:
+6.  With Docker installed, run:
 
 ```
   docker-compose up
