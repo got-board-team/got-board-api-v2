@@ -8,8 +8,8 @@ end
 gem "rails", "~> 5.1.3"
 
 gem "active_interaction", "~> 3.5"
+gem 'active_model_serializers', '~> 0.10.0'
 gem "dotenv-rails", "~> 2.2.0"
-gem "jb", ">= 0.4", "< 1.0.0"
 gem "pg", "~> 0.18"
 gem "puma", "~> 3.7"
 gem "rack-cors"
