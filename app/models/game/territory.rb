@@ -1,5 +1,6 @@
 class Game
   class Territory
+    include ActiveModel::Serialization
     include ActiveRecord::AttributeAssignment
 
     attr_reader :game

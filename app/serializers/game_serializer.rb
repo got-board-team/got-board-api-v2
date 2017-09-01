@@ -1,3 +1,4 @@
 class GameSerializer < ActiveModel::Serializer
-  attributes :id, :territories
+  attributes :id
+  has_many :territories
 end
