@@ -20,16 +20,7 @@ module GotBoardApiV2
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
-
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
-
-    # Only loads a smaller set of middleware suitable for API only apps.
-    # Middleware like session, flash, cookies can be added back manually.
-    # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
-
     ActiveModelSerializers.config.adapter = :json_api # Default: `:attributes`
 
     config.middleware.insert_before 0, Rack::Cors do
@@ -37,6 +28,12 @@ module GotBoardApiV2
         origins "*"
         resource "*", headers: :any, methods: %i[get post options]
       end
+    end
+
+    config.eager_load_paths += Dir.glob("#{config.root}/app/interactions/**/*")
+
+    Raven.configure do |config|
+      config.dsn = "https://fd4fcb2b7835450cbbf74bf6491a4ef0:71879023af06459f9ee823fca886efc2@sentry.io/211956"
     end
   end
 end

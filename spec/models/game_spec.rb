@@ -11,21 +11,9 @@ RSpec.describe Game, type: :model do
     let(:game) { build_stubbed(:game) }
 
     it "fetches a list of territories" do
-      expect(game.territories.first).to be_a(Game::Territory)
-    end
-
-    it "fetches territory from map areas file" do
-      expect(game.territories.first).to have_attributes(
-        id: 1,
-        game_id: game.id,
-        slug: "bay_of_ice",
-        type: "Sea",
-        fortification_type: nil,
-        supply_icons: 0,
-        power_icons: 0,
-        house_sigil: nil,
-        names: { en: "Bay of Ice", pt: "Baía de Gelo" }
-      )
+      allow(Games::FetchTerritories).to receive(:run).and_call_original
+      game.territories
+      expect(Games::FetchTerritories).to have_received(:run).with(game: game)
     end
   end
 end
