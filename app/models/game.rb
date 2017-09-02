@@ -3,7 +3,11 @@ class Game < ApplicationRecord
 
   # @todo
   # Create Player resource
-  has_many :players
+  # has_many :players
+
+  has_one :blade_track
+  has_one :raven_track
+  has_one :throne_track
 
   # @todo
   # Create House model/class?
