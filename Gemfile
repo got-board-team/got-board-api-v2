@@ -31,5 +31,6 @@ end
 
 group :test do
   gem "fuubar", "~> 2.2.0"
+  gem "shoulda-matchers", git: "https://github.com/thoughtbot/shoulda-matchers.git", branch: "rails-5"
   gem "timecop", "~> 0.9"
 end
