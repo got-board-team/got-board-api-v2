@@ -17,6 +17,7 @@ RSpec.describe Game, type: :model do
     it "fetches territory from map areas file" do
       expect(game.territories.first).to have_attributes(
         id: 1,
+        game_id: game.id,
         slug: "bay_of_ice",
         type: "Sea",
         fortification_type: nil,

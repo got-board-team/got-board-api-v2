@@ -17,5 +17,9 @@ class Game
     def initialize(game)
       @game = game
     end
+
+    def game_id
+      @game_id ||= game.id
+    end
   end
 end

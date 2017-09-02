@@ -1,5 +1,6 @@
 class TerritorySerializer < ActiveModel::Serializer
   attributes :id,
+             :game_id,
              :slug,
              :boundaries,
              :type,
