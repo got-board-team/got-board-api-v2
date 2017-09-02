@@ -24,5 +24,13 @@ FactoryGirl.define do
         6 => []
       }
     end
+
+    trait :with_influence_tracks do
+      after(:build) do |game, _|
+        %i[blade raven throne].map do |type|
+          build("#{type}_track".to_sym, game: game)
+        end
+      end
+    end
   end
 end

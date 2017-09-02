@@ -1,10 +1,6 @@
 class Game < ApplicationRecord
   VALID_HOUSES = %w[baratheon lannister stark greyjoy tyrell martell].freeze
 
-  # @todo
-  # Create Player resource
-  # has_many :players
-
   has_one :blade_track
   has_one :raven_track
   has_one :throne_track
