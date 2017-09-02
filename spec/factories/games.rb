@@ -2,9 +2,6 @@ FactoryGirl.define do
   factory :game do
     round 1
     wildling_threat 2
-    throne_track %w[baratheon lannister stark martell greyjoy tyrell]
-    blade_track %w[greyjoy tyrell martell stark baratheon lannister]
-    raven_track %w[lannister stark martell baratheon tyrell greyjoy]
     victory_track do
       {
         0 => [],
