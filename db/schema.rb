@@ -39,8 +39,14 @@ ActiveRecord::Schema.define(version: 20170907023834) do
     t.integer "supply_position", null: false
     t.integer "victory_position", null: false
     t.bigint "game_id"
+    t.bigint "blade_track_id"
+    t.bigint "raven_track_id"
+    t.bigint "throne_track_id"
+    t.index ["blade_track_id"], name: "index_houses_on_blade_track_id"
     t.index ["game_id"], name: "index_houses_on_game_id"
     t.index ["name", "game_id"], name: "index_houses_on_name_and_game_id"
+    t.index ["raven_track_id"], name: "index_houses_on_raven_track_id"
+    t.index ["throne_track_id"], name: "index_houses_on_throne_track_id"
   end
 
   create_table "raven_tracks", force: :cascade do |t|

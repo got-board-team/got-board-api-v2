@@ -8,4 +8,7 @@ class HouseSerializer < ActiveModel::Serializer
              :throne_position
 
   belongs_to :game
+  belongs_to :blade_track
+  belongs_to :raven_track
+  belongs_to :throne_track
 end

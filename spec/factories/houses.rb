@@ -1,6 +1,9 @@
 FactoryGirl.define do
   factory :house do
     association :game
+    association :blade_track
+    association :raven_track
+    association :throne_track
 
     name House::VALID_HOUSES.sample
     throne_position 1

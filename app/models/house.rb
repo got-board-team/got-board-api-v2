@@ -1,8 +1,10 @@
 class House < ApplicationRecord
   VALID_HOUSES = %w[baratheon lannister stark greyjoy tyrell martell].freeze
 
-  # @todo belongs_to tracks?
   belongs_to :game
+  belongs_to :blade_track
+  belongs_to :raven_track
+  belongs_to :throne_track
 
   # @todo Eventually will belong_to :user?
   # @todo Eventually will have_many :house_cards/cards?

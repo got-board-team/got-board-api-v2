@@ -18,7 +18,9 @@ RSpec.describe HouseSerializer, type: :serializer do
 
   context "relationships" do
     it "should serialize its relationships" do
-      expect(serialized_house["data"]["relationships"].keys).to match_array(%w[game])
+      expect(serialized_house["data"]["relationships"].keys).to match_array(
+        %w[game blade-track raven-track throne-track]
+      )
     end
   end
 end
