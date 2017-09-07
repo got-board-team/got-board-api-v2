@@ -10,7 +10,7 @@ namespace :game_data do
     errors = []
 
     territories["map_areas"].each_with_index do |territory, index|
-      slug = territory["slug"].gsub(/_/, '-').gsub("port-of", "port")
+      slug = territory["slug"].tr(/_/, "-").gsub("port-of", "port")
       boundaries = svg.at_css("##{slug} boundaries")
       boundaries = svg.at_css("##{slug}") if boundaries.nil?
       if boundaries.nil?
@@ -27,7 +27,7 @@ namespace :game_data do
     puts "Are you sure you want to save that ? [y/n] (Taca-lhe pau nesse carrinho Marcus ?)"
     input = STDIN.gets.chomp
 
-    if input.downcase == "y"
+    if input.casecmp("y").zero?
       puts "Saving territories boundaries..."
       File.open(yml_file, "w") { |f| f.write territories.to_yaml }
       puts "DONE!"
