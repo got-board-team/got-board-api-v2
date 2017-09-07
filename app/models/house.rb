@@ -34,7 +34,7 @@ class House < ApplicationRecord
 
   def position_changes
     %i[victory supply blade raven throne].map do |track|
-      track if send("#{track}_position").changed?
+      track if send("#{track}_position_changed?")
     end.compact
   end
 end
