@@ -4,6 +4,9 @@ module InfluenceTrackable
   included do
     belongs_to :game
 
+    # @todo spec
+    has_many :houses
+
     validate :house_uniqueness_in_track
     validate :invalid_houses_presence_in_track
 
