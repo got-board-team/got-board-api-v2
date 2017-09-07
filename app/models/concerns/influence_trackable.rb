@@ -16,7 +16,7 @@ module InfluenceTrackable
 
     def invalid_houses_presence_in_track
       positions.map do |house|
-        next if Game::VALID_HOUSES.include?(house)
+        next if House::VALID_HOUSES.include?(house)
         errors.add(:positions, "#{house} house is not a valid house")
       end
     end
