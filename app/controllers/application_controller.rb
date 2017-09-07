@@ -4,6 +4,6 @@ class ApplicationController < ActionController::API
   private
 
   def set_raven_context
-    Raven.extra_content(params: params.to_unsafe_h, url: request.url)
+    Raven.extra_context(params: params.to_unsafe_h, url: request.url)
   end
 end
