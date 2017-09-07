@@ -5,6 +5,8 @@ class House < ApplicationRecord
   belongs_to :blade_track
   belongs_to :raven_track
   belongs_to :throne_track
+  belongs_to :supply_track
+  belongs_to :victory_track
 
   # @todo Eventually will belong_to :user?
   # @todo Eventually will have_many :house_cards/cards?

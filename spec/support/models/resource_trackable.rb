@@ -1,4 +1,4 @@
-RSpec.shared_examples :influence_trackable do
+RSpec.shared_examples :resource_trackable do
   include_examples :trackable
 
   context "when no house is repeated in a track" do
@@ -7,9 +7,14 @@ RSpec.shared_examples :influence_trackable do
     end
   end
 
-  context "when a house is repeated in a track" do
+  context "when a house is repeatead in a track" do
     before :each do
-      track.positions = %w[baratheon baratheon stark lannister greyjoy martell]
+      track.positions = {
+        "0" => [],
+        "1" => %w[stark stark lannister baratheon tyrell],
+        "2" => %w[greyjoy],
+        "3" => [], "4" => [], "5" => [], "6" => []
+      }
     end
 
     it "is not valid" do
@@ -20,7 +25,7 @@ RSpec.shared_examples :influence_trackable do
 
   context "when an invalid house is in the track" do
     before :each do
-      track.positions << "arryn"
+      track.positions["3"] << "arryn"
     end
 
     it "is not valid" do

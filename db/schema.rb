@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170907023834) do
+ActiveRecord::Schema.define(version: 20170907153633) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,8 +27,6 @@ ActiveRecord::Schema.define(version: 20170907023834) do
     t.datetime "updated_at", null: false
     t.integer "round", default: 1, null: false
     t.integer "wildling_threat", default: 2, null: false
-    t.json "victory_track", default: {"0"=>[], "1"=>["baratheon", "lannister", "greyjoy", "tyrell", "martell"], "2"=>["stark"], "3"=>[], "4"=>[], "5"=>[], "6"=>[]}, null: false
-    t.json "supply_track", default: {"0"=>[], "1"=>["stark"], "2"=>["baratheon", "lannister", "greyjoy", "tyrell", "martell"], "3"=>[], "4"=>[], "5"=>[], "6"=>[]}, null: false
   end
 
   create_table "houses", force: :cascade do |t|
@@ -42,11 +40,15 @@ ActiveRecord::Schema.define(version: 20170907023834) do
     t.bigint "blade_track_id"
     t.bigint "raven_track_id"
     t.bigint "throne_track_id"
+    t.bigint "supply_track_id"
+    t.bigint "victory_track_id"
     t.index ["blade_track_id"], name: "index_houses_on_blade_track_id"
     t.index ["game_id"], name: "index_houses_on_game_id"
     t.index ["name", "game_id"], name: "index_houses_on_name_and_game_id"
     t.index ["raven_track_id"], name: "index_houses_on_raven_track_id"
+    t.index ["supply_track_id"], name: "index_houses_on_supply_track_id"
     t.index ["throne_track_id"], name: "index_houses_on_throne_track_id"
+    t.index ["victory_track_id"], name: "index_houses_on_victory_track_id"
   end
 
   create_table "raven_tracks", force: :cascade do |t|
@@ -55,10 +57,22 @@ ActiveRecord::Schema.define(version: 20170907023834) do
     t.index ["game_id"], name: "index_raven_tracks_on_game_id"
   end
 
+  create_table "supply_tracks", force: :cascade do |t|
+    t.bigint "game_id"
+    t.json "positions", default: {"0"=>[], "1"=>["stark"], "2"=>["baratheon", "lannister", "greyjoy", "tyrell", "martell"], "3"=>[], "4"=>[], "5"=>[], "6"=>[]}, null: false
+    t.index ["game_id"], name: "index_supply_tracks_on_game_id"
+  end
+
   create_table "throne_tracks", force: :cascade do |t|
     t.text "positions", default: ["baratheon", "lannister", "stark", "martell", "greyjoy", "tyrell"], null: false, array: true
     t.bigint "game_id"
     t.index ["game_id"], name: "index_throne_tracks_on_game_id"
+  end
+
+  create_table "victory_tracks", force: :cascade do |t|
+    t.bigint "game_id"
+    t.json "positions", default: {"0"=>[], "1"=>["baratheon", "lannister", "greyjoy", "tyrell", "martell"], "2"=>["stark"], "3"=>[], "4"=>[], "5"=>[], "6"=>[]}, null: false
+    t.index ["game_id"], name: "index_victory_tracks_on_game_id"
   end
 
 end

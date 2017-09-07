@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.shared_examples :influence_track_serializer do
+RSpec.shared_examples :track_serializer do
   let(:serialized_track) { serialize(track) }
 
   it "should serialize its attributes" do

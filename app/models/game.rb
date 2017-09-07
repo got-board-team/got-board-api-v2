@@ -2,6 +2,8 @@ class Game < ApplicationRecord
   has_one :blade_track
   has_one :raven_track
   has_one :throne_track
+  has_one :supply_track
+  has_one :victory_track
 
   has_many :houses
 

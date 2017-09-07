@@ -11,7 +11,9 @@ RSpec.describe GameSerializer, type: :serializer do
   context "relationships" do
     it "should serialize its relationships" do
       expect(serialized_game["data"]["relationships"].keys).to match_array(
-        %w[territories houses blade-track raven-track throne-track]
+        %w[territories houses
+           blade-track raven-track throne-track
+           victory-track supply-track]
       )
     end
   end
