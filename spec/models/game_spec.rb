@@ -6,6 +6,7 @@ RSpec.describe Game, type: :model do
   it { is_expected.to have_one(:blade_track) }
   it { is_expected.to have_one(:raven_track) }
   it { is_expected.to have_one(:throne_track) }
+  it { is_expected.to have_many(:houses) }
 
   describe "#territories" do
     let(:game) { build_stubbed(:game) }

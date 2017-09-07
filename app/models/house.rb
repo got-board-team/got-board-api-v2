@@ -5,8 +5,6 @@ class House < ApplicationRecord
 
   # @todo Eventually will belong_to :user?
   # @todo Eventually will have_many :house_cards/cards?
-  #
-  # @todo Needs serializer
 
   validates_inclusion_of :victory_position, in: 0..7
   validates_inclusion_of :supply_position, in: 0..6

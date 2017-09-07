@@ -3,9 +3,7 @@ class Game < ApplicationRecord
   has_one :raven_track
   has_one :throne_track
 
-  # @todo
-  # Create House model/class?
-  # has_many :houses?
+  has_many :houses
 
   validates_numericality_of :round, greater_than: 0, less_than: 11
   validates_numericality_of :wildling_threat, greater_than: 0, less_than: 13, even: true

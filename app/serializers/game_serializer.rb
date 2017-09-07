@@ -3,6 +3,7 @@ class GameSerializer < ActiveModel::Serializer
   attributes :id
 
   has_many :territories
+  has_many :houses
 
   has_one :blade_track
   has_one :raven_track
