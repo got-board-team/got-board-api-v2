@@ -8,6 +8,8 @@ class House < ApplicationRecord
   belongs_to :supply_track
   belongs_to :victory_track
 
+  has_many :influence_tokens
+
   # @todo Eventually will belong_to :user?
   # @todo Eventually will have_many :house_cards/cards?
 

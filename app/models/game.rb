@@ -6,6 +6,7 @@ class Game < ApplicationRecord
   has_one :victory_track
 
   has_many :houses
+  has_many :influence_tokens
 
   validates_numericality_of :round, greater_than: 0, less_than: 11
   validates_numericality_of :wildling_threat, greater_than: 0, less_than: 13, even: true

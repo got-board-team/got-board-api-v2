@@ -1,6 +1,8 @@
 RSpec.shared_examples :influence_trackable do
   include_examples :trackable
 
+  it { is_expected.to have_many(:influence_tokens) }
+
   context "when no house is repeated in a track" do
     it "is valid" do
       expect(track).to be_valid

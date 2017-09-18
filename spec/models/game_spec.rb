@@ -9,6 +9,7 @@ RSpec.describe Game, type: :model do
   it { is_expected.to have_one(:supply_track) }
   it { is_expected.to have_one(:victory_track) }
   it { is_expected.to have_many(:houses) }
+  it { is_expected.to have_many(:influence_tokens) }
 
   describe "#territories" do
     let(:game) { build_stubbed(:game) }

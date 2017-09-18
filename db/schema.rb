@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170907153633) do
+ActiveRecord::Schema.define(version: 20170918012209) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,19 @@ ActiveRecord::Schema.define(version: 20170907153633) do
     t.index ["supply_track_id"], name: "index_houses_on_supply_track_id"
     t.index ["throne_track_id"], name: "index_houses_on_throne_track_id"
     t.index ["victory_track_id"], name: "index_houses_on_victory_track_id"
+  end
+
+  create_table "influence_tokens", force: :cascade do |t|
+    t.integer "position", null: false
+    t.string "influence_track_type"
+    t.bigint "influence_track_id"
+    t.bigint "house_id"
+    t.bigint "game_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_influence_tokens_on_game_id"
+    t.index ["house_id"], name: "index_influence_tokens_on_house_id"
+    t.index ["influence_track_type", "influence_track_id"], name: "index_influence_tokens_on_track_id_and_type"
   end
 
   create_table "raven_tracks", force: :cascade do |t|

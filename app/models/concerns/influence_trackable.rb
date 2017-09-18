@@ -4,6 +4,8 @@ module InfluenceTrackable
   included do
     include Trackable
 
+    has_many :influence_tokens, as: :influence_track
+
     private
 
     def house_uniqueness_in_track
