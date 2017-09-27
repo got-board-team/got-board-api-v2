@@ -3,7 +3,7 @@ class House < ApplicationRecord
 
   belongs_to :game
 
-  has_many :influence_tokens
+  has_many :tokens
 
   # @todo Eventually will belong_to :user?
   # @todo Eventually will have_many :house_cards/cards?
