@@ -1,0 +1,2 @@
+class SupplyTokenSerializer < Token
+end

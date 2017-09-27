@@ -1,7 +1,7 @@
 class GameSerializer < ActiveModel::Serializer
-  # @todo Add round, wildling threat
-  attributes :id
+  attributes :id, :round, :wildling_threat
 
-  has_many :territories
   has_many :houses
+  has_many :tokens
+  has_many :territories
 end
