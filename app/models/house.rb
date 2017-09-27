@@ -10,6 +10,4 @@ class House < ApplicationRecord
 
   validates_inclusion_of :name, in: VALID_HOUSES
   validates_uniqueness_of :name, scope: :game_id
-
-  private
 end
