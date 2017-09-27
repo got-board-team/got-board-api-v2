@@ -1,0 +1,18 @@
+---
+engines:
+ rubocop:
+   enabled: true
+
+ duplication:
+   enabled: true
+
+ metrics:
+   enabled: true
+
+ coverage:
+   enabled: true
+
+exclude_paths:
+     - "db/schema.rb"
+     - "db/migrate/*"
+     - "spec/**/*"

@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+  - 2.4.1
+before_script:
+  - cp config/database.yml.travis config/database.yml
+  - psql -c 'create database gotboard2_test;' -U postgres
+script:
+  - bundle exec rake --trace spec
+services:
+  - postgresql

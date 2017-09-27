@@ -8,11 +8,12 @@ end
 gem "rails", "~> 5.1.3"
 
 gem "active_interaction", "~> 3.5"
+gem "active_model_serializers", "~> 0.10.0"
 gem "dotenv-rails", "~> 2.2.0"
-gem "jb", ">= 0.4", "< 1.0.0"
 gem "pg", "~> 0.18"
 gem "puma", "~> 3.7"
-gem "rack-cors"
+gem "rack-cors", "~> 1.0"
+gem "sentry-raven", "~> 2.6"
 
 group :development, :test do
   gem "awesome_print", "~> 1.8"
@@ -31,5 +32,6 @@ end
 
 group :test do
   gem "fuubar", "~> 2.2.0"
+  gem "shoulda-matchers", git: "https://github.com/thoughtbot/shoulda-matchers.git", branch: "rails-5"
   gem "timecop", "~> 0.9"
 end
