@@ -1,0 +1,2 @@
+class FiefdomToken < Token
+end

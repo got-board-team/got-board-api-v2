@@ -1,0 +1,2 @@
+class VictoryToken < Token
+end
