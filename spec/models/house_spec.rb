@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe House do
   it { is_expected.to belong_to(:game) }
-  it { is_expected.to have_many(:influence_tokens) }
+  it { is_expected.to have_many(:tokens) }
   it { is_expected.to validate_inclusion_of(:name).in_array(House::VALID_HOUSES) }
 
   describe "validations" do

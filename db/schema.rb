@@ -29,14 +29,15 @@ ActiveRecord::Schema.define(version: 20170918012209) do
     t.index ["name", "game_id"], name: "index_houses_on_name_and_game_id"
   end
 
-  create_table "influence_tokens", force: :cascade do |t|
+  create_table "tokens", force: :cascade do |t|
     t.integer "position", null: false
+    t.string "type"
     t.bigint "house_id"
     t.bigint "game_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["game_id"], name: "index_influence_tokens_on_game_id"
-    t.index ["house_id"], name: "index_influence_tokens_on_house_id"
+    t.index ["game_id"], name: "index_tokens_on_game_id"
+    t.index ["house_id"], name: "index_tokens_on_house_id"
   end
 
 end
