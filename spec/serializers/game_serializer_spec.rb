@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe GameSerializer, type: :serializer do
-  let(:game) { create(:game, :with_influence_tracks) }
+  let(:game) { create(:game) }
   let(:serialized_game) { serialize(game) }
 
   it "should serialize its attributes" do
@@ -11,9 +11,7 @@ RSpec.describe GameSerializer, type: :serializer do
   context "relationships" do
     it "should serialize its relationships" do
       expect(serialized_game["data"]["relationships"].keys).to match_array(
-        %w[territories houses
-           blade-track raven-track throne-track
-           victory-track supply-track]
+        %w[territories houses]
       )
     end
   end

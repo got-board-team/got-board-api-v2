@@ -2,18 +2,8 @@ require "rails_helper"
 
 RSpec.describe House do
   it { is_expected.to belong_to(:game) }
-  it { is_expected.to belong_to(:blade_track) }
-  it { is_expected.to belong_to(:raven_track) }
-  it { is_expected.to belong_to(:throne_track) }
-  it { is_expected.to belong_to(:supply_track) }
-  it { is_expected.to belong_to(:victory_track) }
   it { is_expected.to have_many(:influence_tokens) }
   it { is_expected.to validate_inclusion_of(:name).in_array(House::VALID_HOUSES) }
-  it { is_expected.to validate_inclusion_of(:victory_position).in_range(0..7) }
-  it { is_expected.to validate_inclusion_of(:supply_position).in_range(0..6) }
-  it { is_expected.to validate_inclusion_of(:blade_position).in_range(1..6) }
-  it { is_expected.to validate_inclusion_of(:raven_position).in_range(1..6) }
-  it { is_expected.to validate_inclusion_of(:throne_position).in_range(1..6) }
 
   describe "validations" do
     it "validates_uniqueness_of" do
