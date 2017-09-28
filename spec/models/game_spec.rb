@@ -5,6 +5,11 @@ RSpec.describe Game, type: :model do
   it { is_expected.to validate_numericality_of(:wildling_threat).is_greater_than(0).is_less_than(13).even }
   it { is_expected.to have_many(:houses) }
   it { is_expected.to have_many(:tokens) }
+  it { is_expected.to have_many(:iron_throne_tokens) }
+  it { is_expected.to have_many(:fiefdom_tokens) }
+  it { is_expected.to have_many(:kings_court_tokens) }
+  it { is_expected.to have_many(:supply_tokens) }
+  it { is_expected.to have_many(:victory_tokens) }
 
   describe "#territories" do
     let(:game) { build_stubbed(:game) }
