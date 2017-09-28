@@ -1,4 +1,6 @@
 class House < ApplicationRecord
+  # The order matters!
+  # It's sorted according to which houses are played when there are <6 players
   VALID_HOUSES = %w[baratheon lannister stark greyjoy tyrell martell].freeze
 
   belongs_to :game
