@@ -16,6 +16,7 @@ gem "dotenv-rails", "~> 2.2.0"
 gem "pg", "~> 0.18"
 gem "puma", "~> 3.7"
 gem "rack-cors", "~> 1.0"
+gem "responders", "~> 2.4"
 gem "sentry-raven", "~> 2.6"
 
 group :development, :test do
