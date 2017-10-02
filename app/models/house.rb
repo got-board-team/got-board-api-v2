@@ -7,6 +7,12 @@ class House < ApplicationRecord
 
   has_many :tokens
 
+  has_many :units
+  has_many :footmen
+  has_many :knights
+  has_many :ships
+  has_many :siege_engines
+
   # @todo Eventually will belong_to :user?
   # @todo Eventually will have_many :house_cards/cards?
 

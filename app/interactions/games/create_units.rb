@@ -3,6 +3,17 @@ module Games
     object :game
 
     def execute
+      create_starting_units
+      create_available_units
+    end
+
+    private
+
+    def houses
+      @houses ||= game.houses
+    end
+
+    def create_starting_units
       houses.each do |house|
         STARTING_UNITS[house.name].each do |unit|
           game.units.create(type: unit[:type],
@@ -13,11 +24,25 @@ module Games
       end
     end
 
-    private
-
-    def houses
-      @houses ||= game.houses
+    def create_available_units
+      create_remaining_units(:footmen, TOTAL_FOOTMEN_UNITS)
+      create_remaining_units(:knights, TOTAL_KNIGHTS_UNITS)
+      create_remaining_units(:ships, TOTAL_SHIPS_UNITS)
+      create_remaining_units(:siege_engines, TOTAL_SIEGE_ENGINES_UNITS)
     end
+
+    def create_remaining_units(unit_collection, total_units)
+      houses.each do |house|
+        remaining = total_units - house.send(unit_collection).count
+        remaining.times { game.send(unit_collection).create(house_id: house.id) }
+      end
+    end
+
+    # Rulebook page 2
+    TOTAL_FOOTMEN_UNITS = 10
+    TOTAL_KNIGHTS_UNITS = 5
+    TOTAL_SHIPS_UNITS = 6
+    TOTAL_SIEGE_ENGINES_UNITS = 2
 
     STARTING_UNITS = {
       baratheon: [
