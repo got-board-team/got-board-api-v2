@@ -1,0 +1,2 @@
+class SiegeEngineSerializer < UnitSerializer
+end
