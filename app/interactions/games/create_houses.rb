@@ -1,3 +1,4 @@
+# @todo spec
 module Games
   class CreateHouses < ActiveInteraction::Base
     object :game

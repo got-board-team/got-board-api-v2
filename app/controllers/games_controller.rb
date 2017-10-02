@@ -5,10 +5,10 @@ class GamesController < ApplicationController
     render json: game, include: params[:include]
   end
 
+  # @todo spec
   def create
     @game = Games::Create.run(number_of_houses: game_params[:number_of_houses]).result
-    # Find way to redirect to show passing params[:include]
-    respond_with @game
+    render json: @game, include: "**"
   end
 
   private
