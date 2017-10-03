@@ -1,0 +1,2 @@
+class KnightSerializer < UnitSerializer
+end

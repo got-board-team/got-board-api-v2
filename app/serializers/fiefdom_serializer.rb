@@ -1,0 +1,2 @@
+class FiefdomTokenSerializer < Token
+end

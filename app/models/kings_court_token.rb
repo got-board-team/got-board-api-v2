@@ -1,0 +1,2 @@
+class KingsCourtToken < Token
+end

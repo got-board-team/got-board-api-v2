@@ -1,0 +1,2 @@
+class FootmanSerializer < UnitSerializer
+end

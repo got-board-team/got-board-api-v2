@@ -1,0 +1,2 @@
+class VictoryTokenSerializer < Token
+end

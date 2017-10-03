@@ -1,36 +1,36 @@
 baratheon:
-  throne_position: 1
-  blade_position: 5
-  raven_position: 4
-  supply_position: 2
-  victory_position: 1
+  iron_throne_token: 1
+  fiefdom_token: 5
+  kings_court_token: 4
+  supply_token: 2
+  victory_token: 1
 lannister:
-  throne_position: 2
-  blade_position: 6
-  raven_position: 1
-  supply_position: 2
-  victory_position: 1
+  iron_throne_token: 2
+  fiefdom_token: 6
+  kings_court_token: 1
+  supply_token: 2
+  victory_token: 1
 stark:
-  throne_position: 3
-  blade_position: 4
-  raven_position: 2
-  supply_position: 1
-  victory_position: 2
+  iron_throne_token: 3
+  fiefdom_token: 4
+  kings_court_token: 2
+  supply_token: 1
+  victory_token: 2
 greyjoy:
-  throne_position: 5
-  blade_position: 1
-  raven_position: 6
-  supply_position: 2
-  victory_position: 1
+  iron_throne_token: 5
+  fiefdom_token: 1
+  kings_court_token: 6
+  supply_token: 2
+  victory_token: 1
 tyrell:
-  throne_position: 6
-  blade_position: 2
-  raven_position: 5
-  supply_position: 2
-  victory_position: 1
+  iron_throne_token: 6
+  fiefdom_token: 2
+  kings_court_token: 5
+  supply_token: 2
+  victory_token: 1
 martell:
-  throne_position: 4
-  blade_position: 3
-  raven_position: 3
-  supply_position: 2
-  victory_position: 1
+  iron_throne_token: 4
+  fiefdom_token: 3
+  kings_court_token: 3
+  supply_token: 2
+  victory_token: 1

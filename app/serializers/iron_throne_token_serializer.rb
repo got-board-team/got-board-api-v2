@@ -1,0 +1,2 @@
+class IronThroneTokenSerializer < TokenSerializer
+end
