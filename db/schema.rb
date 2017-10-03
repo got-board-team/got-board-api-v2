@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171002221128) do
+ActiveRecord::Schema.define(version: 20171003214748) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,20 @@ ActiveRecord::Schema.define(version: 20171002221128) do
     t.bigint "game_id"
     t.index ["game_id"], name: "index_houses_on_game_id"
     t.index ["name", "game_id"], name: "index_houses_on_name_and_game_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "x", default: 0, null: false
+    t.integer "y", default: 0, null: false
+    t.integer "strength"
+    t.string "territory"
+    t.string "type"
+    t.boolean "special", null: false
+    t.boolean "revealed"
+    t.bigint "game_id"
+    t.bigint "house_id"
+    t.index ["game_id"], name: "index_orders_on_game_id"
+    t.index ["house_id"], name: "index_orders_on_house_id"
   end
 
   create_table "tokens", force: :cascade do |t|
