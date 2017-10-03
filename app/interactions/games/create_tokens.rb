@@ -1,4 +1,3 @@
-# @todo spec
 module Games
   class CreateTokens < ActiveInteraction::Base
     INFLUENCE_TOKENS = %i[iron_throne_tokens fiefdom_tokens kings_court_tokens].freeze
@@ -8,6 +7,7 @@ module Games
       Token.transaction do
         create_tokens
         adjust_tokens_by_number_of_houses
+        game.tokens
       end
     end
 

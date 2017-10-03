@@ -17,5 +17,10 @@ RSpec.describe Games::Create do
       expect(Games::CreateTokens).to receive(:run).and_call_original
       subject
     end
+
+    it "calls CreateUnits" do
+      expect(Games::CreateUnits).to receive(:run).and_call_original
+      subject
+    end
   end
 end

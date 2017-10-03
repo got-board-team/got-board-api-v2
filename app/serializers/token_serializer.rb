@@ -1,3 +1,4 @@
+# @todo spec
 class TokenSerializer < ActiveModel::Serializer
   attributes :id, :type, :position, :house_name
 

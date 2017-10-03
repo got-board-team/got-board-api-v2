@@ -1,4 +1,3 @@
-# @todo spec
 module Games
   class CreateHouses < ActiveInteraction::Base
     object :game
@@ -7,6 +6,7 @@ module Games
     def execute
       House.transaction do
         create_houses
+        game.houses
       end
     end
 

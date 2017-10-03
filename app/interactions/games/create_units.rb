@@ -5,6 +5,7 @@ module Games
     def execute
       create_starting_units
       create_available_units
+      game.units
     end
 
     private
@@ -25,10 +26,9 @@ module Games
     end
 
     def create_available_units
-      create_remaining_units(:footmen, TOTAL_FOOTMEN_UNITS)
-      create_remaining_units(:knights, TOTAL_KNIGHTS_UNITS)
-      create_remaining_units(:ships, TOTAL_SHIPS_UNITS)
-      create_remaining_units(:siege_engines, TOTAL_SIEGE_ENGINES_UNITS)
+      %i[footmen knights ships siege_engines].each do |unit|
+        create_remaining_units(unit, TOTAL_UNITS[unit])
+      end
     end
 
     def create_remaining_units(unit_collection, total_units)
@@ -39,10 +39,12 @@ module Games
     end
 
     # Rulebook page 2
-    TOTAL_FOOTMEN_UNITS = 10
-    TOTAL_KNIGHTS_UNITS = 5
-    TOTAL_SHIPS_UNITS = 6
-    TOTAL_SIEGE_ENGINES_UNITS = 2
+    TOTAL_UNITS = {
+      footmen: 10,
+      knights: 5,
+      ships: 6,
+      siege_engines: 2
+    }.freeze
 
     STARTING_UNITS = {
       baratheon: [
