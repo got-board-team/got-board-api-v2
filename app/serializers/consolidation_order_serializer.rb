@@ -1,0 +1,2 @@
+class ConsolidationOrderSerializer < OrderSerializer
+end

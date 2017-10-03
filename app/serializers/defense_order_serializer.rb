@@ -1,0 +1,2 @@
+class DefenseOrderSerializer < OrderSerializer
+end

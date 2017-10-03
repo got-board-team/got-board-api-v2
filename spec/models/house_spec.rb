@@ -3,6 +3,7 @@ require "rails_helper"
 RSpec.describe House do
   it { is_expected.to belong_to(:game) }
   it { is_expected.to have_many(:tokens) }
+  it { is_expected.to have_many(:orders) }
   it { is_expected.to have_many(:units) }
   it { is_expected.to have_many(:footmen) }
   it { is_expected.to have_many(:knights) }

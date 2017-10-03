@@ -1,0 +1,2 @@
+class SupportOrder < Order
+end

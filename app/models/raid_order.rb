@@ -1,0 +1,2 @@
+class RaidOrder < Order
+end

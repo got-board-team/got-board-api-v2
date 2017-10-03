@@ -8,6 +8,7 @@ module Games
         compose(CreateHouses, game: game, number_of_houses: number_of_houses)
         compose(CreateTokens, game: game)
         compose(CreateUnits, game: game)
+        compose(CreateOrders, game: game)
         game.save
         game
       end

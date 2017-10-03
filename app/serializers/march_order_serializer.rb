@@ -1,0 +1,2 @@
+class MarchOrderSerializer < OrderSerializer
+end
