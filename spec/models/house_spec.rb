@@ -9,6 +9,7 @@ RSpec.describe House do
   it { is_expected.to have_many(:knights) }
   it { is_expected.to have_many(:ships) }
   it { is_expected.to have_many(:siege_engines) }
+  it { is_expected.to have_many(:power_tokens) }
   it { is_expected.to validate_inclusion_of(:name).in_array(House::VALID_HOUSES) }
 
   describe "validations" do

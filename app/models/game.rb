@@ -21,6 +21,8 @@ class Game < ApplicationRecord
   has_many :ships
   has_many :siege_engines
 
+  has_many :power_tokens
+
   validates_numericality_of :round, greater_than: 0, less_than: 11
   validates_numericality_of :wildling_threat, greater_than: 0, less_than: 13, even: true
 

@@ -9,6 +9,7 @@ module Games
         compose(CreateTokens, game: game)
         compose(CreateUnits, game: game)
         compose(CreateOrders, game: game)
+        compose(CreatePowerTokens, game: game)
         game.save
         game
       end
