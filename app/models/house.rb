@@ -16,8 +16,9 @@ class House < ApplicationRecord
 
   has_many :power_tokens
 
+  has_many :house_cards
+
   # @todo Eventually will belong_to :user?
-  # @todo Eventually will have_many :house_cards/cards?
 
   validates_inclusion_of :name, in: VALID_HOUSES
   validates_uniqueness_of :name, scope: :game_id

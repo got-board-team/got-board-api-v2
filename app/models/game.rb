@@ -1,6 +1,8 @@
 class Game < ApplicationRecord
   has_many :houses
 
+  has_many :house_cards
+
   has_many :tokens
   has_many :fiefdom_tokens
   has_many :kings_court_tokens

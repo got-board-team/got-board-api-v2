@@ -10,6 +10,7 @@ module Games
         compose(CreateUnits, game: game)
         compose(CreateOrders, game: game)
         compose(CreatePowerTokens, game: game)
+        compose(CreateHouseCards, game: game)
         game.save
         game
       end

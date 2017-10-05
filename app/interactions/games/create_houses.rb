@@ -4,10 +4,8 @@ module Games
     integer :number_of_houses, default: 6
 
     def execute
-      House.transaction do
-        create_houses
-        game.houses
-      end
+      create_houses
+      game.houses
     end
 
     private

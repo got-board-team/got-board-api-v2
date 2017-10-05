@@ -17,7 +17,7 @@ RSpec.describe GameSerializer, type: :serializer do
            footmen knights ships siege-engines
            consolidation-orders defense-orders march-orders
            raid-orders support-orders
-           power-tokens]
+           power-tokens house-cards]
       )
     end
   end

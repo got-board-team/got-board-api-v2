@@ -4,11 +4,9 @@ module Games
     object :game
 
     def execute
-      Token.transaction do
-        create_tokens
-        adjust_tokens_by_number_of_houses
-        game.tokens
-      end
+      create_tokens
+      adjust_tokens_by_number_of_houses
+      game.tokens
     end
 
     private

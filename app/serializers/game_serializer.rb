@@ -3,6 +3,8 @@ class GameSerializer < ActiveModel::Serializer
 
   has_many :houses
 
+  has_many :house_cards
+
   has_many :iron_throne_tokens
   has_many :fiefdom_tokens
   has_many :kings_court_tokens
