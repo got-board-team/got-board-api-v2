@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/got-board-team/got-board-api-v2.svg?branch=master)](https://travis-ci.org/got-board-team/got-board-api-v2)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/967a4acb20974de092c903dd97484ccf)](https://www.codacy.com/app/lmansur/got-board-api-v2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=got-board-team/got-board-api-v2&amp;utm_campaign=Badge_Grade)
 ## Setup
 
