@@ -10,6 +10,7 @@ RSpec.describe Game, type: :model do
   it { is_expected.to have_many(:kings_court_tokens) }
   it { is_expected.to have_many(:supply_tokens) }
   it { is_expected.to have_many(:victory_tokens) }
+  it { is_expected.to have_many(:orders) }
   it { is_expected.to have_many(:units) }
   it { is_expected.to have_many(:footmen) }
   it { is_expected.to have_many(:knights) }

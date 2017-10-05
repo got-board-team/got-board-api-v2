@@ -14,7 +14,9 @@ RSpec.describe GameSerializer, type: :serializer do
         %w[territories houses
            iron-throne-tokens kings-court-tokens fiefdom-tokens
            supply-tokens victory-tokens
-           footmen knights ships siege-engines]
+           footmen knights ships siege-engines
+           consolidation-orders defense-orders march-orders
+           raid-orders support-orders]
       )
     end
   end

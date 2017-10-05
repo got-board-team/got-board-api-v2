@@ -1,0 +1,2 @@
+class ConsolidationOrder < Order
+end

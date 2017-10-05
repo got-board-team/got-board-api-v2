@@ -6,6 +6,7 @@ class House < ApplicationRecord
   belongs_to :game
 
   has_many :tokens
+  has_many :orders
 
   has_many :units
   has_many :footmen

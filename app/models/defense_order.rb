@@ -1,0 +1,2 @@
+class DefenseOrder < Order
+end

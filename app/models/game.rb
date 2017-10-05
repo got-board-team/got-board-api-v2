@@ -8,6 +8,13 @@ class Game < ApplicationRecord
   has_many :supply_tokens
   has_many :victory_tokens
 
+  has_many :orders
+  has_many :march_orders
+  has_many :support_orders
+  has_many :raid_orders
+  has_many :defense_orders
+  has_many :consolidation_orders
+
   has_many :units
   has_many :footmen
   has_many :knights
