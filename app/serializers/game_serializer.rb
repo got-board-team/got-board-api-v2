@@ -24,4 +24,6 @@ class GameSerializer < ActiveModel::Serializer
   has_many :siege_engines
 
   has_many :power_tokens
+
+  has_many :neutral_force_tokens
 end

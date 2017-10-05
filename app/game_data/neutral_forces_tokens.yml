@@ -1,0 +1,40 @@
+boneway:
+  - 3
+  - [4, 5]
+dornish_marches:
+  - 3
+  - 4
+eyrie:
+  - 3
+  - [4, 5, 6]
+highgarden:
+  - 3
+kings_landing:
+  - 3
+  - [4, 5, 6]
+oldtown:
+  - 3
+  - 4
+princes_pass:
+  - 3
+  - [4, 5]
+pyke:
+  - 3
+salt_shore:
+  - 3
+  - [4, 5]
+starfall:
+  - 3
+  - [4, 5]
+storms_end:
+  - 3
+  - 4
+sunspear:
+  - 3
+  - [4, 5]
+three_towers:
+  - 3
+  - [4, 5]
+yronwood:
+  - 3
+  - [4, 5]
