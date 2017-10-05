@@ -11,6 +11,7 @@
   - Add Influence Tokens
   - Add Supply Tokens
   - Add Victory Tokens
+  - Add units
 ## 0.1.1
   - Upgrade from Ruby 2.4.1 to 2.4.2
 ## 0.1
