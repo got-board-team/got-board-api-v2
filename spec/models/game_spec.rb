@@ -18,6 +18,7 @@ RSpec.describe Game, type: :model do
   it { is_expected.to have_many(:siege_engines) }
   it { is_expected.to have_many(:power_tokens) }
   it { is_expected.to have_many(:house_cards) }
+  it { is_expected.to have_many(:neutral_force_tokens) }
 
   describe "#territories" do
     let(:game) { build_stubbed(:game) }

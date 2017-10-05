@@ -11,6 +11,7 @@ module Games
         compose(CreateOrders, game: game)
         compose(CreatePowerTokens, game: game)
         compose(CreateHouseCards, game: game)
+        compose(CreateNeutralForceTokens, game: game)
         game.save
         game
       end
