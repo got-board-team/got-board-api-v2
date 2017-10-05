@@ -1,0 +1,48 @@
+baratheon:
+  - brienne
+  - davos
+  - melisandre
+  - patchface
+  - renly
+  - salladhor
+  - stannis
+greyjoy:
+  - aeron
+  - asha
+  - balon
+  - dagmar
+  - euron
+  - theon
+  - victarion
+lannister:
+  - cersei
+  - gregor
+  - hound
+  - jaime
+  - kevan
+  - tyrion
+  - tywin
+stark:
+  - catelyn_stark
+  - eddard_stark
+  - greatjon_umber
+  - robb_stark
+  - roose_bolton
+  - ser_rodrik_cassel
+  - the_blackfish
+tyrell:
+  - alester
+  - garlan
+  - loras
+  - mace
+  - margaery
+  - queen
+  - randyll
+martell:
+  - areo
+  - arianne
+  - darkstar
+  - doran
+  - nymeria
+  - obara
+  - redviper

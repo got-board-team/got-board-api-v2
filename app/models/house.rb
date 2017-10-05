@@ -14,6 +14,8 @@ class House < ApplicationRecord
   has_many :ships
   has_many :siege_engines
 
+  has_many :power_tokens
+
   # @todo Eventually will belong_to :user?
   # @todo Eventually will have_many :house_cards/cards?
 

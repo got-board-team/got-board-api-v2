@@ -20,4 +20,6 @@ class GameSerializer < ActiveModel::Serializer
   has_many :knights
   has_many :ships
   has_many :siege_engines
+
+  has_many :power_tokens
 end

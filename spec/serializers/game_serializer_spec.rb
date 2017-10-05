@@ -16,7 +16,8 @@ RSpec.describe GameSerializer, type: :serializer do
            supply-tokens victory-tokens
            footmen knights ships siege-engines
            consolidation-orders defense-orders march-orders
-           raid-orders support-orders]
+           raid-orders support-orders
+           power-tokens]
       )
     end
   end
