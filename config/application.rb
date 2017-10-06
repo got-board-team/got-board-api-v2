@@ -31,9 +31,5 @@ module GotBoardApiV2
     end
 
     config.eager_load_paths += Dir.glob("#{config.root}/app/interactions/**/*")
-
-    Raven.configure do |config|
-      config.dsn = "https://fd4fcb2b7835450cbbf74bf6491a4ef0:71879023af06459f9ee823fca886efc2@sentry.io/211956"
-    end
   end
 end
