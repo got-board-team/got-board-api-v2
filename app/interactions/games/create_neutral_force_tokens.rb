@@ -4,12 +4,9 @@ module Games
 
     def execute
       number_of_houses = game.houses.count
-      neutral_force_tokens_setup.map do |nf_name, range_of_houses|
+      neutral_force_tokens_setup.map do |territory, range_of_houses|
         next if range_of_houses.flatten.exclude?(number_of_houses)
-        range_of_houses.map do |range|
-          next if determine_neutral_force_range(range).blank?
-          game.neutral_force_tokens.create(territory: nf_name)
-        end
+        create_neutral_force(range_of_houses, territory)
       end
       game.neutral_force_tokens
     end
@@ -29,6 +26,13 @@ module Games
         range if range.include?(game.houses.count)
       when false
         range if range == game.houses.count
+      end
+    end
+
+    def create_neutral_force(range_of_houses, territory)
+      range_of_houses.map do |range|
+        next if determine_neutral_force_range(range).blank?
+        game.neutral_force_tokens.create(territory: territory)
       end
     end
   end
