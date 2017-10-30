@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171005232504) do
+ActiveRecord::Schema.define(version: 20171030220828) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 20171005232504) do
   create_table "neutral_force_tokens", force: :cascade do |t|
     t.string "territory"
     t.bigint "game_id"
+    t.string "player_range"
+    t.integer "strength"
     t.index ["game_id"], name: "index_neutral_force_tokens_on_game_id"
   end
 
