@@ -1,3 +1,3 @@
 class NeutralForceTokenSerializer < ActiveModel::Serializer
-  attributes :territory
+  attributes :territory, :player_range, :strength
 end
