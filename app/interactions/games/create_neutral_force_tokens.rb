@@ -29,10 +29,19 @@ module Games
       end
     end
 
+    def format_player_range(range)
+      players_numbers = Array(range)
+      return players_numbers.first if players_numbers.one?
+      "#{players_numbers.first}-#{players_numbers.last}"
+    end
+
     def create_neutral_force(range_of_houses, territory)
       range_of_houses.map do |range|
         next if determine_neutral_force_range(range).blank?
-        game.neutral_force_tokens.create(territory: territory)
+        game.neutral_force_tokens.create(
+          territory: territory,
+          player_range: format_player_range(range)
+        )
       end
     end
   end
