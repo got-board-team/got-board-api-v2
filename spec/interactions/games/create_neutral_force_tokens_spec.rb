@@ -11,9 +11,13 @@ RSpec.describe Games::CreateNeutralForceTokens do
       Games::CreateHouses.run!(game: game, number_of_houses: players_number)
     end
 
-    it "sets neutral_forces player_range" do
+    it "sets neutral_forces player_range, strength, territory" do
       expect(subject).to all(
-        have_attributes(player_range: be_present)
+        have_attributes(
+          territory: be_present,
+          player_range: be_present,
+          strength: be_present
+        )
       )
     end
 
@@ -37,6 +41,7 @@ RSpec.describe Games::CreateNeutralForceTokens do
       let(:players_number) { 5 }
 
       it "creates 9 neutral force tokens" do
+        ap subject
         expect(subject.size).to eq(9)
       end
     end

@@ -1,40 +1,92 @@
 boneway:
-  - 3
-  - [4, 5]
+  front:
+    range: 3
+    strength: 0
+  back:
+    range: [4, 5]
+    strength: 3
 dornish_marches:
-  - 3
-  - 4
+  front:
+    range: 3
+    strength: 0
+  back:
+    range: 4
+    strength: 3
 eyrie:
-  - 3
-  - [4, 5, 6]
+  front:
+    range: 3
+    strength: 6
+  back:
+    range: [4, 5, 6]
+    strength: 6
 highgarden:
-  - 3
+  front:
+    range: 3
+    strength: 0
 kings_landing:
-  - 3
-  - [4, 5, 6]
+  front:
+    range: 3
+    strength: 5
+  back:
+    range: [4, 5, 6]
+    strength: 5
 oldtown:
-  - 3
-  - 4
+  front:
+    range: 3
+    strength: 0
+  back:
+    range: 4
+    strength: 3
 princes_pass:
-  - 3
-  - [4, 5]
+  front:
+    range: 3
+    strength: 0
+  back:
+    range: [4, 5]
+    strength: 3
 pyke:
-  - 3
+  front:
+    range: 3
+    strength: 0
 salt_shore:
-  - 3
-  - [4, 5]
+  front:
+    range: 3
+    strength: 0
+  back:
+    range: [4, 5]
+    strength: 3
 starfall:
-  - 3
-  - [4, 5]
+  front:
+    range: 3
+    strength: 0
+  back:
+    range: [4, 5]
+    strength: 3
 storms_end:
-  - 3
-  - 4
+  front:
+    range: 3
+    strength: 0
+  back:
+    range: 4
+    strength: 4
 sunspear:
-  - 3
-  - [4, 5]
+  front:
+    range: 3
+    strength: 0
+  back:
+    range: [4, 5]
+    strength: 3
 three_towers:
-  - 3
-  - [4, 5]
+  front:
+    range: 3
+    strength: 0
+  back:
+    range: [4, 5]
+    strength: 3
 yronwood:
-  - 3
-  - [4, 5]
+  front:
+    range: 3
+    strength: 0
+  back:
+    range: [4, 5]
+    strength: 3

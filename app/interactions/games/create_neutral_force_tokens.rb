@@ -3,15 +3,21 @@ module Games
     object :game
 
     def execute
-      number_of_houses = game.houses.count
-      neutral_force_tokens_setup.map do |territory, range_of_houses|
-        next if range_of_houses.flatten.exclude?(number_of_houses)
-        create_neutral_force(range_of_houses, territory)
+      neutral_force_tokens_setup.map do |territory, sides|
+        token = select_token_side(sides)
+        next if token.blank?
+        create_neutral_force(token, territory)
       end
       game.neutral_force_tokens
     end
 
     private
+
+    def select_token_side(sides)
+      sides.values.find do |side|
+        Array(side["range"]).include?(game.houses.count)
+      end
+    end
 
     def neutral_force_tokens_setup
       @neutral_force_tokens_setup ||= begin
@@ -35,14 +41,13 @@ module Games
       "#{players_numbers.first}-#{players_numbers.last}"
     end
 
-    def create_neutral_force(range_of_houses, territory)
-      range_of_houses.map do |range|
-        next if determine_neutral_force_range(range).blank?
-        game.neutral_force_tokens.create(
-          territory: territory,
-          player_range: format_player_range(range)
-        )
-      end
+    def create_neutral_force(token, territory)
+      range = Array(token["range"])
+      game.neutral_force_tokens.create(
+        territory: territory,
+        player_range: format_player_range(range),
+        strength: token["strength"]
+      )
     end
   end
 end
