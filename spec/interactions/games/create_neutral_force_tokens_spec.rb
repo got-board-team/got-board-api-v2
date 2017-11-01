@@ -16,7 +16,10 @@ RSpec.describe Games::CreateNeutralForceTokens do
         have_attributes(
           territory: be_present,
           player_range: be_present,
-          strength: be_present
+          x: a_value > 0,
+          y: a_value > 0,
+          strength: be_present,
+          defeated: false
         )
       )
     end
@@ -32,7 +35,7 @@ RSpec.describe Games::CreateNeutralForceTokens do
 
     context "with neutral_forces with a range of number players" do
       it "formats player range" do
-        neutral_force = subject.find_by_territory(:eyrie)
+        neutral_force = subject.find_by_territory(:the_eyrie)
         expect(neutral_force.player_range).to eq "4-6"
       end
     end
@@ -41,7 +44,6 @@ RSpec.describe Games::CreateNeutralForceTokens do
       let(:players_number) { 5 }
 
       it "creates 9 neutral force tokens" do
-        ap subject
         expect(subject.size).to eq(9)
       end
     end

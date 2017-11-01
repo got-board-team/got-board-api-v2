@@ -3,51 +3,47 @@ module Games
     object :game
 
     def execute
-      neutral_force_tokens_setup.map do |territory, sides|
-        token = select_token_side(sides)
-        next if token.blank?
-        create_neutral_force(token, territory)
+      tokens = neutral_force_tokens_setup.map do |territory, token|
+        attributes_for(territory, token)
       end
+      game.neutral_force_tokens.create(tokens.compact)
       game.neutral_force_tokens
     end
 
     private
 
-    def select_token_side(sides)
-      sides.values.find do |side|
-        Array(side["range"]).include?(game.houses.count)
-      end
-    end
-
     def neutral_force_tokens_setup
-      @neutral_force_tokens_setup ||= begin
-                                        file_path = "app/game_data/neutral_forces_tokens.yml"
-                                        YAML.load_file(Rails.root.join(file_path))
-                                      end
+      file_path = "app/game_data/neutral_forces_tokens.yml"
+      YAML.load_file(
+        Rails.root.join(file_path)
+      )
     end
 
-    def determine_neutral_force_range(range)
-      case range.respond_to?(:include?)
-      when true
-        range if range.include?(game.houses.count)
-      when false
-        range if range == game.houses.count
+    def attributes_for(territory, token)
+      side = select_token_side(token)
+      return if side.blank?
+      build_attributes(territory, token, side)
+    end
+
+    def select_token_side(token)
+      token["sides"].values.find do |side|
+        side["range"].include?(game.houses.count)
       end
     end
 
     def format_player_range(range)
-      players_numbers = Array(range)
-      return players_numbers.first if players_numbers.one?
-      "#{players_numbers.first}-#{players_numbers.last}"
+      return range.first if range.one?
+      "#{range.first}-#{range.last}"
     end
 
-    def create_neutral_force(token, territory)
-      range = Array(token["range"])
-      game.neutral_force_tokens.create(
+    def build_attributes(territory, token, side)
+      {
         territory: territory,
-        player_range: format_player_range(range),
-        strength: token["strength"]
-      )
+        x: token["x"],
+        y: token["y"],
+        player_range: format_player_range(side["range"]),
+        strength: side["strength"]
+      }
     end
   end
 end

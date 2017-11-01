@@ -9,7 +9,7 @@ RSpec.describe NeutralForceTokenSerializer, type: :serializer do
 
   it "serializes attributes" do
     expect(subject["data"]["attributes"].keys).to match_array(
-      %w[territory player-range strength]
+      %w[territory player-range strength x y defeated]
     )
   end
 end
