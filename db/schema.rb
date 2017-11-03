@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171030220828) do
+ActiveRecord::Schema.define(version: 20171103072647) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,6 +67,8 @@ ActiveRecord::Schema.define(version: 20171030220828) do
     t.boolean "available", default: false, null: false
     t.bigint "house_id"
     t.bigint "game_id"
+    t.integer "x", default: 0, null: false
+    t.integer "y", default: 0, null: false
     t.index ["game_id"], name: "index_power_tokens_on_game_id"
     t.index ["house_id"], name: "index_power_tokens_on_house_id"
   end

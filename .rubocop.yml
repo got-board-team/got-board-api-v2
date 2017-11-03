@@ -28,7 +28,7 @@ Style/AsciiComments:
 Style/Documentation:
   Enabled: false
 
-Style/DotPosition:
+Layout/DotPosition:
   EnforcedStyle: trailing
 
 Style/FrozenStringLiteralComment:
@@ -38,7 +38,7 @@ Style/ParallelAssignment:
   StyleGuide: "https://github.com/bbatsov/ruby-style-guide#parallel-assignment"
   Enabled: false
 
-Style/SpaceAroundEqualsInParameterDefault:
+Layout/SpaceAroundEqualsInParameterDefault:
   EnforcedStyle: space
 
 Style/StringLiterals:
