@@ -1,13 +1,13 @@
 class PowerTokensController < ApplicationController
+  include CurrentGame
+
   def update
-    token = PowerToken.find(params[:id])
-    token.update_attributes(power_token_params)
-    render json: token
+    update_collection_with(:power_tokens, update_params)
   end
 
   private
 
-  def power_token_params
+  def update_params
     params.require(:data).require(:attributes).permit(
       :x,
       :y,
