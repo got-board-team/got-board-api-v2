@@ -26,4 +26,6 @@ class GameSerializer < ActiveModel::Serializer
   has_many :power_tokens
 
   has_many :neutral_force_tokens
+
+  has_many :garrison_tokens
 end

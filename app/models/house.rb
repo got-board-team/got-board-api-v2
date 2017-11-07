@@ -18,6 +18,8 @@ class House < ApplicationRecord
 
   has_many :house_cards
 
+  has_one :garrison_token
+
   # @todo Eventually will belong_to :user?
 
   validates_inclusion_of :name, in: VALID_HOUSES
