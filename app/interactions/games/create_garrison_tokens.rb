@@ -3,11 +3,13 @@ module Games
     object :game
 
     def execute
-      garrison_setup.map do |house_name, garrison|
+      garrison_setup.map do |house_name, attrs|
         house = game.houses.find_by(name: house_name)
         game.garrison_tokens.create(house: house,
-                                    name: garrison,
-                                    territory: garrison)
+                                    name: attrs["name"],
+                                    territory: attrs["name"],
+                                    x: attrs["x"],
+                                    y: attrs["y"])
       end
     end
 

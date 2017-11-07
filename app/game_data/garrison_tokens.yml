@@ -1,6 +1,24 @@
-baratheon: "dragonstone"
-stark: "winterfell"
-greyjoy: "pyke"
-lannister: "lannisport"
-tyrell: "highgarden"
-martell: "sunspear"
+baratheon:
+  name: "dragonstone"
+  x: 1372
+  y: 1732
+stark: 
+  name: "winterfell"
+  x: 655
+  y: 518
+greyjoy:
+  name: "pyke"
+  x: 179
+  y: 1423
+lannister: 
+  name: "lannisport"
+  x: 299
+  y: 1727
+tyrell:
+  name: "highgarden"
+  x: 246
+  y: 2131
+martell:
+  name: "sunspear"
+  x: 1115
+  y: 2617
