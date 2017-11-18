@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20171107204050) do
   end
 
   create_table "neutral_force_tokens", force: :cascade do |t|
-    t.string "territory"
+    t.string "territory", null: false
     t.bigint "game_id"
     t.string "player_range"
     t.integer "strength", default: 0, null: false
