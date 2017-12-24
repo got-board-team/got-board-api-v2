@@ -18,7 +18,7 @@ RSpec.describe GameSerializer, type: :serializer do
            consolidation-orders defense-orders march-orders
            raid-orders support-orders
            power-tokens house-cards neutral-force-tokens
-           garrison-tokens]
+           garrison-tokens influence-tokens orders]
       )
     end
   end
