@@ -13,8 +13,10 @@ Rails.application.routes.draw do
     end
     resources :units
     resources :garrison_tokens
-    resources :influence_tokens
     resources :neutral_force_tokens
+    resources :influence_tokens, controller: :track_tokens
+    resources :supply_tokens, controller: :track_tokens
+    resources :victory_tokens, controller: :track_tokens
   end
 
   root "games#index"
