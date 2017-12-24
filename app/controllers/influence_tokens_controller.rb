@@ -1,4 +1,4 @@
-class TokensController < ApplicationController
+class InfluenceTokensController < ApplicationController
   include CurrentGame
 
   def update
@@ -11,7 +11,7 @@ class TokensController < ApplicationController
     params.require(:data).require(:attributes).permit(
       :x,
       :y,
-      :position,
+      :position
     )
   end
 end
