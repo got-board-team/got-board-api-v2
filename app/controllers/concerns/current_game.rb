@@ -8,6 +8,7 @@ module CurrentGame
   def update_collection_with(collection, record_attributes)
     record = game.send(collection).find(params[:id])
     record.update_attributes(record_attributes)
+    Pusher.trigger("game", "update", id: record.id, type: record.model_name.to_s, attributes: record_attributes)
     render json: record
   end
 end
