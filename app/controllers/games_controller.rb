@@ -1,6 +1,6 @@
 # @todo spec
 class GamesController < ApplicationController
-  before_action :find_game, only: :show
+  before_action :find_game, only: %i[show update]
 
   def index
     render json: Game.all, include: params[:include]
@@ -15,12 +15,29 @@ class GamesController < ApplicationController
     render json: @game, include: "**"
   end
 
+  def update
+    @game.update_attributes(update_params)
+    Pusher.trigger("game",
+                   "update",
+                   id: game.id,
+                   type: game.model_name.to_s,
+                   attributes: update_params)
+    render json: @game
+  end
+
   private
 
   attr_accessor :game
 
   def game_params
     params.permit(:number_of_houses)
+  end
+
+  def update_params
+    params.require(:data).require(:attributes).permit(
+      :round,
+      :wildling_threat
+    )
   end
 
   def find_game
