@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe Game, type: :model do
   it { is_expected.to validate_numericality_of(:round).is_greater_than(0).is_less_than(11) }
-  it { is_expected.to validate_numericality_of(:wildling_threat).is_greater_than(0).is_less_than(13).even }
+  it { is_expected.to validate_numericality_of(:wildling_threat).is_greater_than_or_equal_to(0).is_less_than(13).even }
   it { is_expected.to have_many(:houses) }
   it { is_expected.to have_many(:tokens) }
   it { is_expected.to have_many(:iron_throne_tokens) }
