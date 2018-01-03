@@ -11,14 +11,9 @@ RSpec.describe GameSerializer, type: :serializer do
   context "relationships" do
     it "should serialize its relationships" do
       expect(serialized_game["data"]["relationships"].keys).to match_array(
-        %w[territories houses
-           iron-throne-tokens kings-court-tokens fiefdom-tokens
-           supply-tokens victory-tokens
-           footmen knights ships siege-engines
-           consolidation-orders defense-orders march-orders
-           raid-orders support-orders
-           power-tokens house-cards neutral-force-tokens
-           garrison-tokens influence-tokens orders]
+        %w[territories houses units orders supply-tokens victory-tokens
+           power-tokens house-cards neutral-force-tokens garrison-tokens
+           influence-tokens]
       )
     end
   end
