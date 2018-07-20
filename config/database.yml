@@ -22,8 +22,8 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
   host: <%= ENV['DATABASE_HOST'] %>
-  username: gotboard
-  password: 
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password:
 
 development:
   <<: *default
