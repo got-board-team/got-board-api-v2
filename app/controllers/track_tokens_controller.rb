@@ -1,4 +1,4 @@
-class InfluenceTokensController < ApplicationController
+class TrackTokensController < ApplicationController
   include CurrentGame
 
   def update

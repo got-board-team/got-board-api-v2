@@ -31,7 +31,7 @@ class Game < ApplicationRecord
   has_many :garrison_tokens
 
   validates_numericality_of :round, greater_than: 0, less_than: 11
-  validates_numericality_of :wildling_threat, greater_than: 0, less_than: 13, even: true
+  validates_numericality_of :wildling_threat, greater_than_or_equal: 0, less_than: 13, even: true
 
   def territories
     @territories ||= Games::FetchTerritories.run(game: self).result
