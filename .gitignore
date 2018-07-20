@@ -16,5 +16,6 @@
 .byebug_history
 *.swp
 *.env
+*.tool-versions
 
 /spec/.rspec.persistence
