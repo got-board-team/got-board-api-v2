@@ -20,7 +20,7 @@ class GamesController < ApplicationController
   attr_accessor :game
 
   def game_params
-    params.permit(:number_of_houses)
+    params.require(:game).permit(:number_of_houses)
   end
 
   def find_game
