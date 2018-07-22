@@ -110,6 +110,7 @@ ActiveRecord::Schema.define(version: 20180722181853) do
   end
 
   create_table "wildling_cards", force: :cascade do |t|
+    t.string "name"
     t.bigint "game_id"
     t.index ["game_id"], name: "index_wildling_cards_on_game_id"
   end
