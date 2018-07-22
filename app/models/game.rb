@@ -2,6 +2,7 @@ class Game < ApplicationRecord
   has_many :houses
 
   has_many :house_cards
+  has_many :wildling_cards
 
   has_many :tokens
   has_many :influence_tokens, foreign_key: "game_id", class_name: "Token"
