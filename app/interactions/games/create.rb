@@ -10,6 +10,7 @@ module Games
           compose(CreateUnits, game: game)
           compose(CreateOrders, game: game)
           compose(CreatePowerTokens, game: game)
+          compose(CreateWildlingCards, game: game)
           compose(CreateHouseCards, game: game)
           compose(CreateNeutralForceTokens, game: game)
           compose(CreateGarrisonTokens, game: game)
