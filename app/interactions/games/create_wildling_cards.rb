@@ -3,8 +3,8 @@ module Games
     object :game
 
     def execute
-      wildling_cards.map do |card|
-        game.wildling_cards.create(name: card)
+      wildling_cards.shuffle.map do |card|
+        game.wildling_cards << { name: card, status: "face-down" }
       end
     end
 
