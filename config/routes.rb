@@ -6,6 +6,13 @@ Rails.application.routes.draw do
 
   resources :games do
     resources :power_tokens
+    resources :wildling_cards do
+      collection do
+        patch :peek
+        patch :draw
+        patch :shuffle
+      end
+    end
     resources :orders do
       collection do
         patch :bulk_update, path: "/"
