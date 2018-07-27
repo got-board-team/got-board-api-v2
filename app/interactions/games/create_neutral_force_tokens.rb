@@ -3,14 +3,17 @@ module Games
     object :game
 
     def execute
-      tokens = neutral_force_tokens_setup.map do |territory, token|
-        attributes_for(territory, token)
-      end
-      game.neutral_force_tokens.create(tokens.compact)
+      game.neutral_force_tokens.import(tokens)
       game.neutral_force_tokens
     end
 
     private
+
+    def tokens
+      neutral_force_tokens_setup.map do |territory, token|
+        attributes_for(territory, token)
+      end.compact
+    end
 
     def neutral_force_tokens_setup
       file_path = "app/game_data/neutral_forces_tokens.yml"

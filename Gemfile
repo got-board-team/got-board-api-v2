@@ -12,6 +12,7 @@ gem "rails"
 
 gem "active_interaction"
 gem "active_model_serializers"
+gem "activerecord-import"
 gem "dotenv-rails"
 gem "pg"
 gem "puma"
