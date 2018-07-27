@@ -5,11 +5,8 @@ module Games
     def execute
       garrison_setup.map do |house_name, attrs|
         house = game.houses.find_by(name: house_name)
-        game.garrison_tokens.create(house: house,
-                                    name: attrs["name"],
-                                    territory: attrs["name"],
-                                    x: attrs["x"],
-                                    y: attrs["y"])
+        next if house.nil?
+        create_garrison_token(house, attrs)  
       end
     end
 
@@ -19,6 +16,18 @@ module Games
       file_path = "app/game_data/garrison_tokens.yml"
       YAML.load_file(
         Rails.root.join(file_path)
+      )
+    end
+
+    def create_garrison_token(house, attributes)
+      name = attributes["name"]
+
+      game.garrison_tokens.create(
+        house: house,
+        name: name,
+        territory: name,
+        x: attributes["x"],
+        y: attributes["y"]
       )
     end
   end
