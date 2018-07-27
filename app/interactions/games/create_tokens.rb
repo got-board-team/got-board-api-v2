@@ -13,9 +13,12 @@ module Games
 
     def create_tokens
       game.houses.each do |house|
+        tokens = []
         houses_setup[house.name].each do |token, position|
-          token.camelize.constantize.create(game: game, house: house, position: position)
+          token_class = token.camelize.constantize
+          tokens << token_class.new(game: game, house: house, position: position)
         end
+        Token.import(tokens)
       end
     end
 
