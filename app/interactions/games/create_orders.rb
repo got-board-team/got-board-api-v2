@@ -1,4 +1,3 @@
-# @todo spec
 module Games
   class CreateOrders < ActiveInteraction::Base
     object :game
