@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Modify Ruby version in travis file aswell
-ruby "2.4.2"
+ruby "2.5.1"
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -22,7 +22,7 @@ gem "sentry-raven"
 group :development, :test do
   gem "awesome_print"
   gem "byebug"
-  gem "factory_girl_rails"
+  gem "factory_bot_rails"
   gem "pry-byebug"
   gem "rspec-rails"
 end

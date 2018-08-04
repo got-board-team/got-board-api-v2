@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :neutral_force_token do
     association :game
     territory "eyrie"
