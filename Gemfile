@@ -36,7 +36,9 @@ group :development do
 end
 
 group :test do
+  gem "codacy-coverage", :require => false
   gem "fuubar"
   gem "shoulda-matchers", git: "https://github.com/thoughtbot/shoulda-matchers.git", branch: "rails-5"
+  gem "simplecov", require: false
   gem "timecop"
 end
