@@ -8,34 +8,34 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem "rails", "~> 5.1.3"
+gem "rails"
 
-gem "active_interaction", "~> 3.5"
-gem "active_model_serializers", "~> 0.10.0"
-gem "dotenv-rails", "~> 2.2.0"
-gem "pg", "~> 0.18"
-gem "puma", "~> 3.7"
+gem "active_interaction"
+gem "active_model_serializers"
+gem "dotenv-rails"
+gem "pg"
+gem "puma"
 gem "pusher"
-gem "rack-cors", "~> 1.0"
-gem "sentry-raven", "~> 2.6"
+gem "rack-cors"
+gem "sentry-raven"
 
 group :development, :test do
-  gem "awesome_print", "~> 1.8"
+  gem "awesome_print"
   gem "byebug"
-  gem "factory_girl_rails", "~> 4.8"
-  gem "pry-byebug", "~> 3.5"
-  gem "rspec-rails", "~> 3.6"
+  gem "factory_girl_rails"
+  gem "pry-byebug"
+  gem "rspec-rails"
 end
 
 group :development do
-  gem "listen", ">= 3.0.5", "< 3.2"
+  gem "listen"
   gem "spring"
-  gem "spring-commands-rspec", "~> 1.0"
-  gem "spring-watcher-listen", "~> 2.0.0"
+  gem "spring-commands-rspec"
+  gem "spring-watcher-listen"
 end
 
 group :test do
-  gem "fuubar", "~> 2.2.0"
+  gem "fuubar"
   gem "shoulda-matchers", git: "https://github.com/thoughtbot/shoulda-matchers.git", branch: "rails-5"
-  gem "timecop", "~> 0.9"
+  gem "timecop"
 end
