@@ -6,7 +6,7 @@ module Games
       garrison_setup.map do |house_name, attrs|
         house = game.houses.find_by(name: house_name)
         next if house.nil?
-        create_garrison_token(house, attrs)  
+        create_garrison_token(house, attrs)
       end
     end
 
