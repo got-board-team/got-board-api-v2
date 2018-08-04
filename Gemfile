@@ -12,6 +12,7 @@ gem "rails"
 
 gem "active_interaction"
 gem "active_model_serializers"
+gem "activerecord-import"
 gem "dotenv-rails"
 gem "pg"
 gem "puma"
@@ -35,7 +36,9 @@ group :development do
 end
 
 group :test do
+  gem "codacy-coverage", require: false
   gem "fuubar"
   gem "shoulda-matchers", git: "https://github.com/thoughtbot/shoulda-matchers.git", branch: "rails-5"
+  gem "simplecov", require: false
   gem "timecop"
 end

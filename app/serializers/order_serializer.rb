@@ -1,4 +1,3 @@
-# @todo spec
 class OrderSerializer < ActiveModel::Serializer
   belongs_to :game
   belongs_to :house

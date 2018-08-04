@@ -12,9 +12,11 @@ module Games
 
     def create_houses
       house_names = House::VALID_HOUSES.first(number_of_houses)
+      houses = []
       house_names.each do |house_name|
-        game.houses.create(name: house_name)
+        houses << game.houses.build(name: house_name)
       end
+      House.import(houses)
     end
   end
 end
