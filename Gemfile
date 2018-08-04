@@ -22,7 +22,7 @@ gem "sentry-raven"
 group :development, :test do
   gem "awesome_print"
   gem "byebug"
-  gem "factory_girl_rails"
+  gem "factory_bot_rails"
   gem "pry-byebug"
   gem "rspec-rails"
 end
