@@ -15,7 +15,7 @@ class WildlingCardsController < ApplicationController
 
   def shuffle
     wildling_cards.shuffle!
-    game.save 
+    game.save
   end
 
   private
