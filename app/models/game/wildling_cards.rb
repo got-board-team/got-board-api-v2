@@ -1,3 +1,4 @@
+# @todo spec
 class Game
   class WildlingCards
     attr_reader :cards
