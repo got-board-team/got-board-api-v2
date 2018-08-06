@@ -180,6 +180,7 @@ GEM
     rspec-support (3.7.1)
     ruby-progressbar (1.9.0)
     ruby_dep (1.5.0)
+    scout_apm (2.4.14)
     sentry-raven (2.7.4)
       faraday (>= 0.7.6, < 1.0)
     simplecov (0.16.1)
@@ -231,6 +232,7 @@ DEPENDENCIES
   rack-cors
   rails
   rspec-rails
+  scout_apm
   sentry-raven
   shoulda-matchers!
   simplecov

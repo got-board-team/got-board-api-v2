@@ -18,6 +18,7 @@ gem "pg"
 gem "puma"
 gem "pusher"
 gem "rack-cors"
+gem "scout_apm"
 gem "sentry-raven"
 
 group :development, :test do
