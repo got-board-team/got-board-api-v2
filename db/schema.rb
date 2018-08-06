@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180723222748) do
+ActiveRecord::Schema.define(version: 2018_07_23_222748) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20180723222748) do
   end
 
   create_table "neutral_force_tokens", force: :cascade do |t|
-    t.string "territory", null: false
+    t.string "territory"
     t.bigint "game_id"
     t.string "player_range"
     t.integer "strength", default: 0, null: false

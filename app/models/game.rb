@@ -36,4 +36,9 @@ class Game < ApplicationRecord
   def territories
     @territories ||= Games::FetchTerritories.run(game: self).result
   end
+
+  # @todo spec
+  def wildling_cards
+    @wildling_cards ||= Game::WildlingCards.new(super)
+  end
 end
