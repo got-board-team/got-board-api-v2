@@ -3,9 +3,11 @@ module Games
     object :game
 
     def execute
+      cards = []
       wildling_cards.shuffle.map do |card|
-        game.wildling_cards << { name: card, status: "face-down" }
+        cards << { name: card, status: "face-down" }
       end
+      game.wildling_cards = cards
     end
 
     private
