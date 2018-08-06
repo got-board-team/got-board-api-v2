@@ -1,14 +1,13 @@
+# @todo spec
 class WildlingCardsController < ApplicationController
   def peek
-    card = wildling_cards.first
-    serializable_card = WildlingCard.new(name: card["name"])
-    render json: serializable_card
+    render json: game.wildling_cards.peek
   end
 
   def draw
-    card = wildling_cards.shift
+    card = wildling_cards.cards.shift
     serializable_card = WildlingCard.new(name: card["name"])
-    wildling_cards.push(card)
+    wildling_cards.cards.push(card)
     game.save
     render json: serializable_card
   end
