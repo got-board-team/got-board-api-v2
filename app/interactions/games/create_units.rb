@@ -9,7 +9,6 @@ module Games
       build_available_units
 
       Unit.import(@units)
-      game.units
     end
 
     private
