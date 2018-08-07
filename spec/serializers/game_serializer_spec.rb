@@ -11,7 +11,7 @@ RSpec.describe GameSerializer, type: :serializer do
   context "attributes" do
     it "serializes its attributes" do
       expect(serialized_game["data"]["attributes"].keys).to match_array(
-        %w[round wildling-threat wildling-cards]
+        %w[round wildling-threat]
       )
     end
   end
@@ -21,7 +21,7 @@ RSpec.describe GameSerializer, type: :serializer do
       expect(serialized_game["data"]["relationships"].keys).to match_array(
         %w[territories houses units orders supply-tokens victory-tokens
            power-tokens house-cards neutral-force-tokens garrison-tokens
-           influence-tokens]
+           influence-tokens wildling-cards]
       )
     end
   end
