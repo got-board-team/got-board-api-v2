@@ -15,7 +15,7 @@ To view the history of changes made, go to the [CHANGELOG](https://github.com/go
   cd got-board-api-v2
 ```
 
-2. Install Ruby 2.4.1 and bundler gem
+2. Install Ruby 2.5.1 and the `bundler` gem
 
 3. Install all gems
 ```
