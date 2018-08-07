@@ -3,15 +3,26 @@ module WildlingCards
     object :game
 
     def execute
-      # @todo Return revealed card if already exists
+      return revealed_card if any_revealed_card?
       first_card.tap { |card| card.update_attributes(status: "revealed") }
     end
 
     private
 
+    def revealed_card
+      @revealed_card ||= wildling_cards.revealed
+    end
+
+    def wildling_cards
+      @wildling_cards ||= game.wildling_cards
+    end
+
+    def any_revealed_card?
+      revealed_card.present?
+    end
+
     def first_card
-      game.
-        wildling_cards.
+      wildling_cards.
         first
     end
   end

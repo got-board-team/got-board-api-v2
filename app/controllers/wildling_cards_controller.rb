@@ -1,4 +1,3 @@
-# @todo spec
 class WildlingCardsController < ApplicationController
   def peek
     card = WildlingCards::Reveal.run!(game: game)
