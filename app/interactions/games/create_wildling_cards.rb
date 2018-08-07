@@ -4,10 +4,10 @@ module Games
 
     def execute
       cards = []
-      wildling_cards.shuffle.map do |card|
-        cards << { name: card, status: "face-down" }
+      wildling_cards.shuffle.map.with_index do |card, index|
+        cards << { name: card, status: "face-down", game_id: game.id, position: index + 1 }
       end
-      game.wildling_cards = cards
+      WildlingCard.import(cards)
     end
 
     private

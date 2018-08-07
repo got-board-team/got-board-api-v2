@@ -2,6 +2,7 @@ class Game < ApplicationRecord
   has_many :houses
 
   has_many :house_cards
+  has_many :wildling_cards, -> { order(position: :asc) }
 
   has_many :tokens
   has_many :influence_tokens, foreign_key: "game_id", class_name: "Token"
@@ -35,10 +36,5 @@ class Game < ApplicationRecord
 
   def territories
     @territories ||= Games::FetchTerritories.run(game: self).result
-  end
-
-  # @todo spec
-  def wildling_cards
-    @wildling_cards ||= Game::WildlingCards.new(super)
   end
 end

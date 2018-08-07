@@ -11,6 +11,8 @@ Rails.application.routes.draw do
         patch :peek
         patch :draw
         patch :shuffle
+        patch :hide
+        patch :move_to_bottom
       end
     end
     resources :orders do

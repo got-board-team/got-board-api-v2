@@ -1,3 +1,3 @@
 class WildlingCardSerializer < ActiveModel::Serializer
-  attributes :name
+  attributes :name, :status
 end

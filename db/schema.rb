@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_23_222748) do
+ActiveRecord::Schema.define(version: 2018_08_06_194115) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 2018_07_23_222748) do
     t.datetime "updated_at", null: false
     t.integer "round", default: 1, null: false
     t.integer "wildling_threat", default: 2, null: false
-    t.json "wildling_cards", default: [], array: true
   end
 
   create_table "garrison_tokens", force: :cascade do |t|
@@ -108,6 +107,14 @@ ActiveRecord::Schema.define(version: 2018_07_23_222748) do
     t.bigint "house_id"
     t.index ["game_id"], name: "index_units_on_game_id"
     t.index ["house_id"], name: "index_units_on_house_id"
+  end
+
+  create_table "wildling_cards", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "status", null: false
+    t.integer "position", null: false
+    t.bigint "game_id"
+    t.index ["game_id"], name: "index_wildling_cards_on_game_id"
   end
 
 end
