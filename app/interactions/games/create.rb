@@ -7,7 +7,7 @@ module Games
         Game.create.tap do |game|
           compose(CreateHouses, game: game, number_of_houses: number_of_houses)
           compose(CreateTokens, game: game)
-          compose(CreateUnits, game: game)
+          compose(CreateUnitsImport, game: game)
           compose(CreateOrders, game: game)
           compose(CreatePowerTokens, game: game)
           compose(CreateWildlingCards, game: game)
