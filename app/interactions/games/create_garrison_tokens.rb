@@ -3,11 +3,15 @@ module Games
     object :game
 
     def execute
-      garrison_setup.map do |house_name, attrs|
+      @garrisons = []
+
+      garrison_setup.map do |house_name, garrison_attributes|
         house = game.houses.find_by(name: house_name)
         next if house.nil?
-        create_garrison_token(house, attrs)
+        build_garrison_attributes(house.id, garrison_attributes)
       end
+
+      GarrisonToken.import(@garrisons)
     end
 
     private
@@ -19,16 +23,17 @@ module Games
       )
     end
 
-    def create_garrison_token(house, attributes)
+    def build_garrison_attributes(house_id, attributes)
       name = attributes["name"]
 
-      game.garrison_tokens.create(
-        house: house,
+      @garrisons << {
+        house_id: house_id,
+        game_id: game.id,
         name: name,
         territory: name,
         x: attributes["x"],
         y: attributes["y"]
-      )
+      }
     end
   end
 end
