@@ -1,6 +1,8 @@
-class TerritorySerializer < ActiveModel::Serializer
-  attributes :id,
-             :game_id,
+class TerritorySerializer
+  include FastJsonapi::ObjectSerializer
+
+  set_key_transform :dash
+  attributes :game_id,
              :slug,
              :boundaries,
              :type,

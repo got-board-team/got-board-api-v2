@@ -1,9 +1,10 @@
 class WildlingCardsController < ApplicationController
   def peek
     card = WildlingCards::Reveal.run!(game: game)
+    serialized_card = WildlingCardSerializer.new(card).serialized_json
     Pusher.trigger("game", "wildling-peek", game_id: game.id, 42 => 42) # @todo Send the user that requested the peek
 
-    render json: card
+    render json: serialized_card
   end
 
   def hide
@@ -13,9 +14,10 @@ class WildlingCardsController < ApplicationController
 
   def draw
     card = WildlingCards::Reveal.run!(game: game)
+    serialized_card = WildlingCardSerializer.new(card).serialized_json
     Pusher.trigger("game", "wildling-draw", game_id: game.id, name: card.name) # @todo Send the user that requested the draw?
 
-    render json: card
+    render json: serialized_card
   end
 
   def move_to_bottom

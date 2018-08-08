@@ -1,19 +1,14 @@
-class OrderSerializer < ActiveModel::Serializer
+class OrderSerializer
+  include FastJsonapi::ObjectSerializer
+
+  set_key_transform :dash
+  attributes :x, :y, :territory, :revealed, :special, :strength
+
   belongs_to :game
   belongs_to :house
 
-  attributes(
-    :type,
-    :x,
-    :y,
-    :territory,
-    :revealed,
-    :special,
-    :strength,
-    :house_name
-  )
-
-  def house_name
+  attribute :order_type, &:type
+  attribute :house_name do |object|
     object.house.name
   end
 end

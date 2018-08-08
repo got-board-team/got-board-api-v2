@@ -1,22 +1,43 @@
 require "rails_helper"
 
 RSpec.describe "Games" do
-  context "listing Games" do
-    before :each do
-      create_list(:game, 2)
-    end
+  context "finding a game" do
+    let(:game_id) { Games::Create.run!(number_of_houses: 3).id }
 
     it "is successful" do
-      get "/games"
-
+      get "/games/#{game_id}"
       expect(response).to have_http_status(:ok)
     end
 
-    it "returns all games" do
-      get "/games"
+    it "does not return included relationships" do
+      get "/games/#{game_id}"
+      parsed_response = JSON.parse(response.body)
 
+      expect(parsed_response["included"]).to be_nil
+    end
+
+    it "responds with the game" do
+      get "/games/#{game_id}"
       parsed_response = JSON.parse(response.body)["data"]
-      expect(parsed_response.size).to eq(2)
+
+      expect(parsed_response["id"]).to eq(game_id.to_s)
+      expect(parsed_response["type"]).to eq("game")
+    end
+
+    context "with included relationships" do
+      it "responds with included relationships" do
+        get "/games/#{game_id}?include=houses,garrison_tokens"
+        parsed_response = JSON.parse(response.body)
+
+        expect(parsed_response["included"]).to contain_exactly(
+          include("type" => "house"),
+          include("type" => "house"),
+          include("type" => "house"),
+          include("type" => "garrison-token"),
+          include("type" => "garrison-token"),
+          include("type" => "garrison-token")
+        )
+      end
     end
   end
 end

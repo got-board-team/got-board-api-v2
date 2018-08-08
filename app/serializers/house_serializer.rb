@@ -1,6 +1,8 @@
-class HouseSerializer < ActiveModel::Serializer
-  attributes :id,
-             :name
+class HouseSerializer
+  include FastJsonapi::ObjectSerializer
+
+  set_key_transform :dash
+  attributes :name
 
   belongs_to :game
 end
