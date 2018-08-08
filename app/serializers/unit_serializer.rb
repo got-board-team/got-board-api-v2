@@ -1,4 +1,7 @@
-class UnitSerializer < ActiveModel::Serializer
+class UnitSerializer
+  include FastJsonapi::ObjectSerializer
+
+  set_key_transform :dash
   attributes :id, :type, :house_name, :territory, :x, :y
 
   belongs_to :game

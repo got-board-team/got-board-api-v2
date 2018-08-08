@@ -1,5 +1,8 @@
-class GameSerializer < ActiveModel::Serializer
-  attributes :id, :round, :wildling_threat
+class GameSerializer
+  include FastJsonapi::ObjectSerializer
+
+  set_key_transform :dash
+  attributes :round, :wildling_threat
 
   has_many :houses
   has_many :units

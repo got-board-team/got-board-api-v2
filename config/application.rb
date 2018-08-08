@@ -21,7 +21,6 @@ module GotBoardApiV2
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
     config.api_only = true
-    ActiveModelSerializers.config.adapter = :json_api # Default: `:attributes`
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do

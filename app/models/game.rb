@@ -37,4 +37,8 @@ class Game < ApplicationRecord
   def territories
     @territories ||= Games::FetchTerritories.run(game: self).result
   end
+
+  def territory_ids
+    []
+  end
 end

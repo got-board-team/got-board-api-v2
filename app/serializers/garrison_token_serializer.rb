@@ -1,7 +1,10 @@
-class GarrisonTokenSerializer < ActiveModel::Serializer
-  attributes :name, :territory, :house_name, :x, :y
+class GarrisonTokenSerializer
+  include FastJsonapi::ObjectSerializer
 
-  def house_name
+  set_key_transform :dash
+  attributes :name, :territory, :x, :y
+
+  attribute :house_name do |object|
     object.house.name
   end
 end
