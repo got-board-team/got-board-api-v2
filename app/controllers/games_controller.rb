@@ -7,7 +7,7 @@ class GamesController < ApplicationController
   end
 
   def create
-    game = Games::Create.run(number_of_houses: game_params[:number_of_houses]).result
+    @game = Games::Create.run(number_of_houses: game_params[:number_of_houses]).result
     render json: serialized_game
   end
 
