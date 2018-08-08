@@ -2,9 +2,9 @@ class HouseCardSerializer
   include FastJsonapi::ObjectSerializer
 
   set_key_transform :dash
-  attributes :name, :house_name
+  attributes :name
 
-  def house_name
+  attribute :house_name do |object|
     object.house.name
   end
 end

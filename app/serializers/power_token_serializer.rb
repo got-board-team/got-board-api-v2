@@ -2,9 +2,9 @@ class PowerTokenSerializer
   include FastJsonapi::ObjectSerializer
 
   set_key_transform :dash
-  attributes :available, :territory, :house_name, :x, :y
+  attributes :available, :territory, :x, :y
 
-  def house_name
+  attribute :house_name do |object|
     object.house.name
   end
 end
