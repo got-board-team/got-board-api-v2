@@ -35,7 +35,11 @@ class Game < ApplicationRecord
   validates_numericality_of :wildling_threat, greater_than_or_equal_to: 0, less_than: 13, even: true
 
   def territories
-    @territories ||= Games::FetchTerritories.run(game: self).result
+    @territories ||= Territory.all
+  end
+
+  def territories_ids
+    @territories_ids ||= Territory.pluck(:id)
   end
 
   def territory_ids
