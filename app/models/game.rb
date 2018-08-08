@@ -38,7 +38,7 @@ class Game < ApplicationRecord
     @territories ||= Territory.all
   end
 
-  def territories_ids
-    @territories_ids ||= Territory.pluck(:id)
+  def territory_ids
+    @territory_ids ||= Territory.pluck(:id)
   end
 end
