@@ -2,7 +2,7 @@ class TokenSerializer
   include FastJsonapi::ObjectSerializer
 
   set_key_transform :dash
-  attributes :token_type, :position, :x, :y
+  attributes :position, :x, :y
 
   belongs_to :game
   belongs_to :house

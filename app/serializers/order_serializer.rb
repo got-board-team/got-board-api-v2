@@ -2,7 +2,7 @@ class OrderSerializer
   include FastJsonapi::ObjectSerializer
 
   set_key_transform :dash
-  attributes :order_type, :x, :y, :territory, :revealed, :special, :strength
+  attributes :x, :y, :territory, :revealed, :special, :strength
 
   belongs_to :game
   belongs_to :house
