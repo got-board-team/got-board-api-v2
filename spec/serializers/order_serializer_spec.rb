@@ -10,7 +10,7 @@ RSpec.describe OrderSerializer, type: :serializer do
 
   it "serializes attributes" do
     expect(subject["data"]["attributes"].keys).to match_array(
-      %w[type x y territory revealed special strength house-name]
+      %w[order-type x y territory revealed special strength house-name]
     )
   end
 

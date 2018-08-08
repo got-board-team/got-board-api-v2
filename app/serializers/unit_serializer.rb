@@ -2,7 +2,7 @@ class UnitSerializer
   include FastJsonapi::ObjectSerializer
 
   set_key_transform :dash
-  attributes :id, :type, :house_name, :territory, :x, :y
+  attributes :id, :unit_type, :house_name, :territory, :x, :y
 
   belongs_to :game
 
