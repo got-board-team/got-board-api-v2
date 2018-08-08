@@ -23,12 +23,10 @@ RSpec.describe Game, type: :model do
   it { is_expected.to have_many(:garrison_tokens) }
 
   describe "#territories" do
-    let(:game) { build_stubbed(:game) }
+    let(:game) { build(:game, :with_territories) }
 
     it "fetches a list of territories" do
-      allow(Games::FetchTerritories).to receive(:run).and_call_original
-      game.territories
-      expect(Games::FetchTerritories).to have_received(:run).with(game: game)
+      expect(game.territories).to exist
     end
   end
 end
