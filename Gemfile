@@ -19,8 +19,8 @@ gem "pg"
 gem "puma"
 gem "pusher"
 gem "rack-cors"
+gem "rollbar"
 gem "scout_apm"
-gem "sentry-raven"
 
 group :development, :test do
   gem "awesome_print"

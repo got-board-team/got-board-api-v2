@@ -67,10 +67,6 @@ Rails.application.configure do
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
 
-  Raven.configure do |config|
-    config.dsn = "https://fd4fcb2b7835450cbbf74bf6491a4ef0:71879023af06459f9ee823fca886efc2@sentry.io/211956"
-  end
-
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
