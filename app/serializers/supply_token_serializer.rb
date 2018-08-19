@@ -1,2 +1,2 @@
-class SupplyTokenSerializer < Token
+class SupplyTokenSerializer < TokenSerializer
 end
