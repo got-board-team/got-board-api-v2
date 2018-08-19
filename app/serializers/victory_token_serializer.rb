@@ -1,2 +1,2 @@
-class VictoryTokenSerializer < Token
+class VictoryTokenSerializer < TokenSerializer
 end
