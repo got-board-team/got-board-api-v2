@@ -9,7 +9,7 @@ class OrdersController < ApplicationController
     orders = game.orders.where(filter_params)
     orders.update_all(bulk_update_params.to_hash)
     rendered = render json: orders
-    Pusher.trigger("game", "bulk_update", type: "orders", payload: rendered)
+    Pusher.trigger("game", "bulk-update", type: "orders", payload: rendered)
   end
 
   private
