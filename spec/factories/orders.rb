@@ -3,10 +3,10 @@ FactoryBot.define do
     association :game
     association :house
 
-    special false
+    special { false }
 
     trait :march do
-      type :march
+      type { :march }
     end
   end
 end
