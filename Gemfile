@@ -11,10 +11,10 @@ end
 gem "rails"
 
 gem "active_interaction"
-gem "active_model_serializers"
 gem "activerecord-import"
 gem "acts_as_list"
 gem "dotenv-rails"
+gem "fast_jsonapi"
 gem "pg"
 gem "puma"
 gem "pusher"

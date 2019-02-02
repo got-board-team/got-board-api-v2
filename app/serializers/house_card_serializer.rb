@@ -1,7 +1,10 @@
-class HouseCardSerializer < ActiveModel::Serializer
-  attributes :name, :house_name
+class HouseCardSerializer
+  include FastJsonapi::ObjectSerializer
 
-  def house_name
+  set_key_transform :dash
+  attributes :name
+
+  attribute :house_name do |object|
     object.house.name
   end
 end

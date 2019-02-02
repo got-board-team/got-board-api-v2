@@ -1,6 +1,8 @@
-class TerritorySerializer < ActiveModel::Serializer
-  attributes :id,
-             :slug,
+class TerritorySerializer
+  include FastJsonapi::ObjectSerializer
+
+  set_key_transform :dash
+  attributes :slug,
              :boundaries,
              :territory_type,
              :fortification_type,

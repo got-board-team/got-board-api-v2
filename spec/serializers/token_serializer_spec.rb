@@ -9,7 +9,7 @@ RSpec.describe TokenSerializer, type: :serializer do
 
   it "serializes attributes" do
     expect(subject["data"]["attributes"].keys).to match_array(
-      %w[type x y position house-name]
+      %w[token-type x y position house-name]
     )
   end
 

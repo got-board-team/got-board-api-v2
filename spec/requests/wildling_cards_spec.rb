@@ -19,7 +19,7 @@ RSpec.describe "Wildling Cards" do
       subject
       parsed_response = JSON.parse(response.body)["data"]
 
-      expect(parsed_response["type"]).to eq("wildling-cards")
+      expect(parsed_response["type"]).to eq("wildling-card")
       expect(parsed_response["attributes"]).to match(
         "name" => String,
         "status" => "revealed"

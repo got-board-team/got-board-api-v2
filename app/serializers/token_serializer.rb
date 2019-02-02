@@ -1,10 +1,14 @@
-class TokenSerializer < ActiveModel::Serializer
-  attributes :id, :type, :position, :x, :y, :house_name
+class TokenSerializer
+  include FastJsonapi::ObjectSerializer
+
+  set_key_transform :dash
+  attributes :position, :x, :y
 
   belongs_to :game
   belongs_to :house
 
-  def house_name
+  attribute :token_type, &:type
+  attribute :house_name do |object|
     object.house.name
   end
 end
