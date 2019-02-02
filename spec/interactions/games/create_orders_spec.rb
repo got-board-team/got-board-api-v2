@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe Games::CreateOrders do
-  let(:game) { Game.new }
+  let(:game) { Game.create }
 
   subject { described_class.run!(game: game) }
 
