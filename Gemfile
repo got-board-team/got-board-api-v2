@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Modify Ruby version in travis file aswell
-ruby "2.5.1"
+ruby "2.6.0"
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -25,7 +25,7 @@ gem "scout_apm"
 group :development, :test do
   gem "awesome_print"
   gem "byebug"
-  gem "factory_bot_rails"
+  gem "factory_bot_rails", "~> 4.10"
   gem "pry-byebug"
   gem "rspec-rails"
 end
