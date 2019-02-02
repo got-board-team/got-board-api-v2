@@ -1,9 +1,8 @@
 class TerritorySerializer < ActiveModel::Serializer
   attributes :id,
-             :game_id,
              :slug,
              :boundaries,
-             :type,
+             :territory_type,
              :fortification_type,
              :supply_icons,
              :power_icons,

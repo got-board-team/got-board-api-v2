@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_06_194115) do
+ActiveRecord::Schema.define(version: 2018_08_08_175924) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -82,6 +82,17 @@ ActiveRecord::Schema.define(version: 2018_08_06_194115) do
     t.integer "y", default: 0, null: false
     t.index ["game_id"], name: "index_power_tokens_on_game_id"
     t.index ["house_id"], name: "index_power_tokens_on_house_id"
+  end
+
+  create_table "territories", force: :cascade do |t|
+    t.string "territory_type"
+    t.string "fortification_type"
+    t.text "boundaries"
+    t.string "supply_icons"
+    t.string "power_icons"
+    t.string "house_sigil"
+    t.string "slug"
+    t.json "names"
   end
 
   create_table "tokens", force: :cascade do |t|
