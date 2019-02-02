@@ -53,7 +53,7 @@ RSpec.describe Games::CreateHouseCards do
       have_attributes(name: "doran"),
       have_attributes(name: "nymeria"),
       have_attributes(name: "obara"),
-      have_attributes(name: "redviper"),
+      have_attributes(name: "redviper")
     )
   end
 end

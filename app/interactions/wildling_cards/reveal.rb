@@ -4,6 +4,7 @@ module WildlingCards
 
     def execute
       return revealed_card if any_revealed_card?
+
       first_card.tap { |card| card.update_attributes(status: "revealed") }
     end
 

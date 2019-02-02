@@ -32,6 +32,7 @@ module Games
     def adjust_tokens_by_number_of_houses
       number_of_houses = game.houses
       return if number_of_houses == 6
+
       INFLUENCE_TOKENS.each do |influence_token|
         tokens = game.send(influence_token)
         tokens.sort_by(&:position).map.with_index do |token, index|

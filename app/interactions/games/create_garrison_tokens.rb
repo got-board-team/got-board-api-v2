@@ -8,6 +8,7 @@ module Games
       garrison_setup.map do |house_name, garrison_attributes|
         house = game.houses.find_by(name: house_name)
         next if house.nil?
+
         build_garrison_attributes(house.id, garrison_attributes)
       end
 
