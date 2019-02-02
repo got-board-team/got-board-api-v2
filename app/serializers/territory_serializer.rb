@@ -2,10 +2,9 @@ class TerritorySerializer
   include FastJsonapi::ObjectSerializer
 
   set_key_transform :dash
-  attributes :game_id,
-             :slug,
+  attributes :slug,
              :boundaries,
-             :type,
+             :territory_type,
              :fortification_type,
              :supply_icons,
              :power_icons,
