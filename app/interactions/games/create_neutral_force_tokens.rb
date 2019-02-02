@@ -25,6 +25,7 @@ module Games
     def attributes_for(territory, token)
       side = select_token_side(token)
       return if side.blank?
+
       build_attributes(territory, token, side)
     end
 
@@ -36,6 +37,7 @@ module Games
 
     def format_player_range(range)
       return range.first if range.one?
+
       "#{range.first}-#{range.last}"
     end
 

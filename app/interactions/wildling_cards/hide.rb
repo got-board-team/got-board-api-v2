@@ -4,6 +4,7 @@ module WildlingCards
 
     def execute
       return if revealed_card.blank?
+
       revealed_card.update(status: "face-down")
     end
 

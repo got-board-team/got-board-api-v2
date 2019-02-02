@@ -11,7 +11,7 @@ class UnitsController < ApplicationController
     params.require(:data).require(:attributes).permit(
       :x,
       :y,
-      :territory,
+      :territory
     )
   end
 end

@@ -41,8 +41,4 @@ class Game < ApplicationRecord
   def territory_ids
     @territory_ids ||= Territory.pluck(:id)
   end
-
-  def territory_ids
-    []
-  end
 end
