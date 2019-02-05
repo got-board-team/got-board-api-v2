@@ -12,6 +12,8 @@ class CreateWesterosDecks < ActiveRecord::Migration[5.2]
       t.string :title, null: false
       t.string :revealed, default: false, null: false
 
+      t.integer :position, null: false
+
       t.bigint :westeros_deck_id, null: false, index: true
 
       t.timestamps
