@@ -122,7 +122,7 @@ ActiveRecord::Schema.define(version: 2019_02_05_215508) do
 
   create_table "westeros_cards", force: :cascade do |t|
     t.string "title", null: false
-    t.string "revealed", default: "f", null: false
+    t.boolean "revealed", default: false, null: false
     t.integer "position", null: false
     t.bigint "westeros_deck_id", null: false
     t.datetime "created_at", null: false
