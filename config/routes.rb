@@ -15,6 +15,12 @@ Rails.application.routes.draw do
         patch :move_to_bottom
       end
     end
+    resources :westeros_decks do
+      collection do
+        patch :draw
+        patch :shuffle
+      end
+    end
     resources :orders do
       collection do
         patch :bulk_update, path: "/"
