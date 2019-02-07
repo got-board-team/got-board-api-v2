@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     end
     resources :westeros_decks do
       collection do
-        patch :draw
+        patch :reveal
         patch :shuffle
       end
     end
