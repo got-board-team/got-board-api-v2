@@ -5,7 +5,6 @@ class Game < ApplicationRecord
   has_many :wildling_cards, -> { order(position: :asc) }
 
   has_many :tokens
-  has_many :influence_tokens, foreign_key: "game_id", class_name: "Token"
   has_many :fiefdom_tokens
   has_many :kings_court_tokens
   has_many :iron_throne_tokens
