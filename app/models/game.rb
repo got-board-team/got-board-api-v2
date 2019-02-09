@@ -40,4 +40,12 @@ class Game < ApplicationRecord
   def territory_ids
     @territory_ids ||= Territory.pluck(:id)
   end
+
+  def influence_tokens
+    @influence_tokens ||= tokens.where(type: %w[IronThroneToken KingsCourtToken FiefdomToken])
+  end
+
+  def influence_token_ids
+    influence_tokens.pluck(:id)
+  end
 end

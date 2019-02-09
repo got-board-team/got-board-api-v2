@@ -29,4 +29,42 @@ RSpec.describe Game, type: :model do
       expect(game.territories).to exist
     end
   end
+
+  context "influence_tokens" do
+    let(:game) { create(:game) }
+    let(:stark) { create(:house, game: game, name: "stark") }
+    let(:baratheon) { create(:house, game: game, name: "baratheon") }
+
+    before :each do
+      game.iron_throne_tokens.create(id: 1, position: 1, house_id: stark.id)
+      game.iron_throne_tokens.create(id: 2, position: 2, house_id: baratheon.id)
+      game.fiefdom_tokens.create(id: 3, position: 1, house_id: stark.id)
+      game.fiefdom_tokens.create(id: 4, position: 2, house_id: baratheon.id)
+      game.kings_court_tokens.create(id: 5, position: 1, house_id: stark.id)
+      game.kings_court_tokens.create(id: 6, position: 2, house_id: baratheon.id)
+      game.supply_tokens.create(id: 7, position: 1, house_id: stark.id)
+      game.supply_tokens.create(id: 8, position: 2, house_id: baratheon.id)
+    end
+
+    describe "#influence_tokens" do
+      it "returns all influence tokens" do
+        expect(game.influence_tokens).to contain_exactly(
+          have_attributes(type: "IronThroneToken", position: 1, house_id: stark.id),
+          have_attributes(type: "IronThroneToken", position: 2, house_id: baratheon.id),
+          have_attributes(type: "FiefdomToken", position: 1, house_id: stark.id),
+          have_attributes(type: "FiefdomToken", position: 2, house_id: baratheon.id),
+          have_attributes(type: "KingsCourtToken", position: 1, house_id: stark.id),
+          have_attributes(type: "KingsCourtToken", position: 2, house_id: baratheon.id)
+        )
+      end
+    end
+
+    describe "#influence_token_ids" do
+      it "returns all influence tokens ids" do
+        expect(game.influence_token_ids).to contain_exactly(
+          1, 2, 3, 4, 5, 6
+        )
+      end
+    end
+  end
 end
