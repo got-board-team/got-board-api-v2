@@ -1,0 +1,2 @@
+class InfluenceTokenSerializer < TokenSerializer
+end

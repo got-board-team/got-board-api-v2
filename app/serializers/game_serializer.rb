@@ -14,9 +14,7 @@ class GameSerializer
   has_many :neutral_force_tokens
   has_many :garrison_tokens
 
-  has_many :fiefdom_tokens
-  has_many :kings_court_tokens
-  has_many :iron_throne_tokens
+  has_many :influence_tokens
   has_many :supply_tokens
   has_many :victory_tokens
 

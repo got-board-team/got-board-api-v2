@@ -26,7 +26,7 @@ RSpec.describe "Games" do
 
     context "with included relationships" do
       it "responds with included relationships" do
-        get "/games/#{game_id}?include=houses,garrison_tokens"
+        get "/games/#{game_id}?include=houses,garrison_tokens,influence_tokens"
         parsed_response = JSON.parse(response.body)
 
         expect(parsed_response["included"]).to contain_exactly(
@@ -35,7 +35,16 @@ RSpec.describe "Games" do
           include("type" => "house"),
           include("type" => "garrison-token"),
           include("type" => "garrison-token"),
-          include("type" => "garrison-token")
+          include("type" => "garrison-token"),
+          include("type" => "influence-token"),
+          include("type" => "influence-token"),
+          include("type" => "influence-token"),
+          include("type" => "influence-token"),
+          include("type" => "influence-token"),
+          include("type" => "influence-token"),
+          include("type" => "influence-token"),
+          include("type" => "influence-token"),
+          include("type" => "influence-token")
         )
       end
     end
