@@ -1,17 +1,26 @@
 module WesterosDecks
   class Reveal < ActiveInteraction::Base
-    object :deck, class: "WesterosDeck"
+    object :game
 
     def execute
-      hide_previous_card
-      revealed_card.update(revealed: true)
+      cards = []
+      decks.each do |deck|
+        hide_previous_card(deck)
+        card = revealed_card(deck)
+        card.update(revealed: true)
 
-      revealed_card
+        cards << card
+      end
+      cards
     end
 
     private
 
-    def hide_previous_card
+    def decks
+      game.westeros_decks
+    end
+
+    def hide_previous_card(deck)
       previous_card = deck.westeros_cards.first
       return unless previous_card.revealed?
 
@@ -19,8 +28,8 @@ module WesterosDecks
       previous_card.move_to_bottom
     end
 
-    def revealed_card
-      @revealed_card ||= deck.westeros_cards.first
+    def revealed_card(deck)
+      deck.westeros_cards.first
     end
   end
 end
