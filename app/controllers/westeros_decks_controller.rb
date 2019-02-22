@@ -1,15 +1,20 @@
 class WesterosDecksController < ApplicationController
+  # @todo spec
   def reveal
-    card = WesterosDecks::Reveal.run!(deck: deck)
-    serialized_card = WesterosCardSerializer.new(card).serialized_json
+    cards = WesterosDecks::Reveal.run!(game: game)
+    serialized_cards = WesterosCardSerializer.new(cards).serialized_json
 
     # @todo Send the user that requested the draw?
-    Pusher.trigger("game", "westeros-draw", game_id: game.id, name: card.title)
+    cards.each do |card|
+      Pusher.trigger("game", "westeros-draw", game_id: game.id, name: card.title)
+    end
 
-    render json: serialized_card
+    render json: serialized_cards
   end
 
+  # @todo spec
   def shuffle
+    # @todo Implement this interaction
     WesterosCards::Shuffle.run!(game: game)
 
     # @todo Send the user that requested the shuffle?
@@ -17,10 +22,6 @@ class WesterosDecksController < ApplicationController
   end
 
   private
-
-  def deck
-    @deck ||= game.westeros_decks.find_by_tier(params[:deck_tier])
-  end
 
   def game
     @game ||= Game.find(params[:game_id])

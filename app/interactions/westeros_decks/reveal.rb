@@ -4,6 +4,7 @@ module WesterosDecks
 
     def execute
       cards = []
+
       decks.each do |deck|
         hide_previous_card(deck)
         card = revealed_card(deck)
@@ -11,6 +12,7 @@ module WesterosDecks
 
         cards << card
       end
+
       cards
     end
 
