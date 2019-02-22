@@ -13,7 +13,7 @@ RSpec.describe WesterosCardSerializer, type: :serializer do
   context "attributes" do
     it "serializes its attributes" do
       expect(serialized_card["data"]["attributes"].keys).to match_array(
-        %w[title]
+        %w[title deck-tier]
       )
     end
   end
