@@ -13,7 +13,7 @@ You can also implement the feature yourself! Just create an issue beforehand so 
   cd got-board-api-v2
 ```
 
-2. Install Ruby 2.5.1 and the `bundler` gem
+2. Install Ruby 2.6.1 and the `bundler` gem
 
 3. Install all gems
 ```

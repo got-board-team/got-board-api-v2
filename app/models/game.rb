@@ -6,7 +6,6 @@ class Game < ApplicationRecord
   has_many :westeros_decks
 
   has_many :tokens
-  has_many :influence_tokens, foreign_key: "game_id", class_name: "Token"
   has_many :fiefdom_tokens
   has_many :kings_court_tokens
   has_many :iron_throne_tokens
@@ -41,5 +40,13 @@ class Game < ApplicationRecord
 
   def territory_ids
     @territory_ids ||= Territory.pluck(:id)
+  end
+
+  def influence_tokens
+    @influence_tokens ||= tokens.where(type: %w[IronThroneToken KingsCourtToken FiefdomToken])
+  end
+
+  def influence_token_ids
+    influence_tokens.pluck(:id)
   end
 end
