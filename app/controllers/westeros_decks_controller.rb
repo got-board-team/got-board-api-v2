@@ -14,14 +14,18 @@ class WesterosDecksController < ApplicationController
 
   # @todo spec
   def shuffle
-    # @todo Implement this interaction
-    WesterosCards::Shuffle.run!(game: game)
+    WesterosDecks::Shuffle.run!(deck: deck)
 
     # @todo Send the user that requested the shuffle?
     Pusher.trigger("game", "westeros-shuffle", game_id: game.id, 42 => 42)
+    head :ok
   end
 
   private
+
+  def deck
+    @deck ||= game.westeros_decks.find_by(tier: params[:tier])
+  end
 
   def game
     @game ||= Game.find(params[:game_id])
