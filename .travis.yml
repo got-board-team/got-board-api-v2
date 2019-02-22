@@ -1,7 +1,7 @@
 language: ruby
 cache: bundler
 rvm:
-  - 2.6.0
+  - 2.6.1
 before_script:
   - cp config/database.yml.travis config/database.yml
   - psql -c 'create database gotboard2_test;' -U postgres
