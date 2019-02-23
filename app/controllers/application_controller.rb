@@ -13,6 +13,6 @@ class ApplicationController < ActionController::API
   end
 
   def headers
-    { authorization: request.headers['Authorization'] }
+    { authorization: request.headers["Authorization"] }
   end
 end

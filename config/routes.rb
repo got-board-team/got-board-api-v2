@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get "tokens/units"
 
-  post 'authenticate', to: 'authentication#authenticate'
+  post "authenticate", to: "authentication#authenticate"
 
   resources :games do
     resources :power_tokens
