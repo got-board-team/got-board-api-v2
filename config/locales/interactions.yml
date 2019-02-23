@@ -1,0 +1,15 @@
+en:
+  active_interaction:
+    errors:
+      models:
+        authentication_user:
+          attributes:
+            base:
+              invalid_credentials: Invalid credentials
+        authorize_api_request:
+          attributes:
+            headers:
+              invalid_nested: Authorization in header did not come
+              invalid_type: Invalid type
+            base:
+              invalid_token: Invalid token
