@@ -92,6 +92,7 @@ GEM
     i18n (1.5.3)
       concurrent-ruby (~> 1.0)
     json (2.1.0)
+    jwt (2.1.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -223,6 +224,7 @@ DEPENDENCIES
   faker
   fast_jsonapi
   fuubar
+  jwt
   listen
   pg
   pry-byebug
