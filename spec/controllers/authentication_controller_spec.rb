@@ -4,10 +4,6 @@ RSpec.describe AuthenticationController, type: :controller do
   describe 'POST authenticate' do
     let!(:user) { create(:user, id: 42) }
 
-    before :each do
-      allow(Rails.application.secrets).to receive(:secret_key_base).and_return("FOO")
-    end
-
     context 'when is valid' do
       let(:params) do
         {
@@ -20,6 +16,7 @@ RSpec.describe AuthenticationController, type: :controller do
 
       before do
         Timecop.freeze(Time.local(2017, 2, 26))
+        allow(Rails.application.secrets).to receive(:secret_key_base).and_return("FOO")
         post :authenticate, params: params, format: :json
       end
 
