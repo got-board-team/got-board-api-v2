@@ -21,7 +21,7 @@ class AuthenticationUser < ActiveInteraction::Base
   end
 
   def authenticate?
-    return user if user && user.authenticate(password)
+    return user if user&.authenticate(password)
 
     errors.add :base, :invalid_credentials
     false
