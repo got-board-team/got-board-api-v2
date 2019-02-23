@@ -3,7 +3,11 @@ require_dependency "json_web_token"
 
 RSpec.describe JsonWebToken, type: :lib do
   let(:token_str) do
-    'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0MiwiZXhwIjoxNDg4MTY0NDAwfQ.ZMHeNY9QTe0B3VLkmiIGxjXayJGWSRnYc1tTqcqThLI'
+    'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0MiwiZXhwIjoxNDg4MTY0NDAwfQ.DCXVVuhxEWz7L8lqwIaJvifVEMRqygDnQY2abVBJ4mc'
+  end
+
+  before :each do
+    allow(Rails.application.secrets).to receive(:secret_key_base).and_return("FOO")
   end
 
   describe '.encode' do
