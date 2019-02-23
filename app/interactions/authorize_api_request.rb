@@ -31,6 +31,6 @@ class AuthorizeApiRequest < ActiveInteraction::Base
   end
 
   def http_auth_header
-    authorization.split(' ').last
+    authorization.split(" ").last
   end
 end
