@@ -14,11 +14,16 @@ RSpec.describe WesterosDecks::Shuffle do
       subject
 
       expect(deck.westeros_cards).to contain_exactly(
-        have_attributes(position: 1, revealed: false),
-        have_attributes(position: 2, revealed: false),
-        have_attributes(position: 3, revealed: false),
-        have_attributes(position: 4, revealed: false),
-        have_attributes(position: 5, revealed: false)
+        have_attributes(position: 1,  revealed: false),
+        have_attributes(position: 2,  revealed: false),
+        have_attributes(position: 3,  revealed: false),
+        have_attributes(position: 4,  revealed: false),
+        have_attributes(position: 5,  revealed: false),
+        have_attributes(position: 6,  revealed: false),
+        have_attributes(position: 7,  revealed: false),
+        have_attributes(position: 8,  revealed: false),
+        have_attributes(position: 9,  revealed: false),
+        have_attributes(position: 10, revealed: false)
       )
     end
   end

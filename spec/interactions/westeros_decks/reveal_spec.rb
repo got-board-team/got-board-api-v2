@@ -73,19 +73,19 @@ RSpec.describe WesterosDecks::Reveal do
       expect(previous_card1.revealed).to eq(false)
       expect(previous_card1).to have_attributes(
         revealed: false,
-        position: 5
+        position: 10
       )
 
       expect(previous_card2.revealed).to eq(false)
       expect(previous_card2).to have_attributes(
         revealed: false,
-        position: 5
+        position: 10
       )
 
       expect(previous_card3.revealed).to eq(false)
       expect(previous_card3).to have_attributes(
         revealed: false,
-        position: 7
+        position: 10
       )
     end
   end
