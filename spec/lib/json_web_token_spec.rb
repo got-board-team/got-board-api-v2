@@ -1,5 +1,5 @@
 require 'rails_helper'
-require_dependency 'json_web_token'
+require_dependency "json_web_token"
 
 RSpec.describe JsonWebToken, type: :lib do
   let(:token_str) do

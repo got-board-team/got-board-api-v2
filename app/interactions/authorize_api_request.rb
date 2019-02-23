@@ -4,7 +4,7 @@
 # outcome.valid?
 # outcome.errors.messages
 # outcome.result
-require_dependency 'json_web_token'
+require_dependency "json_web_token"
 
 class AuthorizeApiRequest < ActiveInteraction::Base
   hash :headers do
