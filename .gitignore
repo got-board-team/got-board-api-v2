@@ -8,6 +8,7 @@
 .byebug_history
 *.swp
 *.env
+*.envrc
 *.tool-versions
 
 /spec/.rspec.persistence
