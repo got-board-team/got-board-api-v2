@@ -9,5 +9,3 @@ script:
   - bundle exec rake --trace spec
 services:
   - postgresql
-env:
-  - SECRET_KEY_BASE=foo
