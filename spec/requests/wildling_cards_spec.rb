@@ -41,11 +41,6 @@ RSpec.describe "Wildling Cards" do
     allow(Pusher).to receive(:trigger)
   end
 
-  after do
-    Timecop.return
-  end
-
-
   context "peeking a wildling card" do
     subject { patch "/games/#{game_id}/wildling_cards/peek", headers: headers }
 

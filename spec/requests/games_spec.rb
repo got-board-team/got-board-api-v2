@@ -13,10 +13,6 @@ RSpec.describe "Games" do
     allow(Rails.application.secrets).to receive(:secret_key_base).and_return("FOO")
   end
 
-  after do
-    Timecop.return
-  end
-
   context "finding a game" do
     let(:game_id) { Games::Create.run!(number_of_houses: 3).id }
 

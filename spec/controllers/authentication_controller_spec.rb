@@ -20,10 +20,6 @@ RSpec.describe AuthenticationController, type: :controller do
         post :authenticate, params: params, format: :json
       end
 
-      after do
-        Timecop.return
-      end
-
       it 'returns HTTP 200 ok' do
         expect(response.status).to eq(200)
       end

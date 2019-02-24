@@ -10,10 +10,6 @@ RSpec.describe JsonWebToken, type: :lib do
     allow(Rails.application.secrets).to receive(:secret_key_base).and_return("FOO")
   end
 
-  after do
-    Timecop.return
-  end
-
   describe '.encode' do
     it 'generates token' do
       Timecop.freeze(Time.local(2017, 2, 26)) do
