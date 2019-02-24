@@ -12,7 +12,7 @@ class JsonWebToken
     def decode(token)
       body = JWT.decode(token, secret_key_base, true, algorithm: "HS256")[0]
       HashWithIndifferentAccess.new body
-    rescue
+    rescue StandardError
       nil
     end
 
