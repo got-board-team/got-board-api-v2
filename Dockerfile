@@ -1,6 +1,4 @@
-FROM ruby:latest
-
-MAINTAINER Rafael Borgonovi Tauil
+FROM ruby:2.6.3
 
 RUN mkdir -p /app
 WORKDIR /app

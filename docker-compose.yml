@@ -6,7 +6,7 @@ services:
     build: ./
     volumes:
       - ./:/app
-    command: bash -c "bundle && rake db:migrate && source .env && rails s"
+    command: bash -c "bundle && rake db:setup && source .env && rails s"
     ports:
       - "3000:3000"
     links:
