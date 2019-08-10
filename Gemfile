@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Modify Ruby version in travis file aswell
-ruby "2.6.1"
+ruby "2.6.3"
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
