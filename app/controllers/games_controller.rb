@@ -26,7 +26,7 @@ class GamesController < ApplicationController
   attr_accessor :game
 
   def include_params
-    params[:include]&.split(",")
+    params[:include]&.split(",")&.map { |relationship| relationship.tr("-", "_") }
   end
 
   def game_params
