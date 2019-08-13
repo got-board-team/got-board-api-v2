@@ -1,10 +1,16 @@
 class CombatController < ApplicationController
+  include CurrentGame
+
   def update
-    payload = {
-      attacker: nil,
-      defender: nil,
-      started: true
-    }.to_json
-    Pusher.trigger("game", "combat", type: "combat", payload: payload)
+    Pusher.trigger("game", "combat", id: params[:id], type: "combat", attributes: update_params)
+    render json: update_params
+  end
+
+  def update_params
+    params.require(:data).require(:attributes).permit(
+      :started,
+      :revealed,
+      choosenCard: [:id, :name, :houseName]
+    )
   end
 end
