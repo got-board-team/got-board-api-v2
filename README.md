@@ -44,6 +44,23 @@ This will download, install, configure and run all external dependencies
 
 8. Voilá
 
+## Test Authorization Token
+
+```
+# How the request should look
+
+$ curl -H "Content-Type: application/json" -X POST -d '{"email":"example@mail.com","password":"123123123"}' http://localhost:3000/authenticate
+
+# Your token will now be returned
+
+{"auth_token":"foo"}
+
+# Put it in the `Authorization` header:
+
+$ curl -H "Authorization: foo" http://localhost:3000/games
+
+```
+
 ## Deployment
 
 To deploy the application to Heroku, make sure everything is committed and pushed to the desired branch. Ideally you want to push the `master` branch to the `heroku` remote. To do so, run:

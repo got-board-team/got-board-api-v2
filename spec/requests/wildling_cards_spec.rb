@@ -27,14 +27,22 @@ RSpec.describe "Wildling Cards" do
     end
   end
 
+  let!(:user) { create(:user, id: 42) }
   let(:game_id) { Games::Create.run!(number_of_houses: 3).id }
+  let(:headers) do
+    {
+      "Authorization" => 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0MiwiZXhwIjoxNDg4MTY0NDAwfQ.DCXVVuhxEWz7L8lqwIaJvifVEMRqygDnQY2abVBJ4mc'
+    }
+  end
 
-  before :each do
+  before do
+    Timecop.freeze(Time.local(2017, 2, 26))
+    allow(Rails.application.secrets).to receive(:secret_key_base).and_return("FOO")
     allow(Pusher).to receive(:trigger)
   end
 
   context "peeking a wildling card" do
-    subject { patch "/games/#{game_id}/wildling_cards/peek" }
+    subject { patch "/games/#{game_id}/wildling_cards/peek", headers: headers }
 
     it "sends Pusher message" do
       expect(Pusher).to receive(:trigger).with(
@@ -47,7 +55,7 @@ RSpec.describe "Wildling Cards" do
   end
 
   context "drawing a wildling card" do
-    subject { patch "/games/#{game_id}/wildling_cards/draw" }
+    subject { patch "/games/#{game_id}/wildling_cards/draw", headers: headers }
 
     it "sends Pusher message" do
       expect(Pusher).to receive(:trigger).with(
@@ -60,7 +68,7 @@ RSpec.describe "Wildling Cards" do
   end
 
   context "shuffling a wildling card" do
-    subject { patch "/games/#{game_id}/wildling_cards/shuffle" }
+    subject { patch "/games/#{game_id}/wildling_cards/shuffle", headers: headers }
 
     it "sends Pusher message" do
       expect(Pusher).to receive(:trigger).with(
@@ -84,7 +92,7 @@ RSpec.describe "Wildling Cards" do
   end
 
   context "hiding a wildling card" do
-    subject { patch "/games/#{game_id}/wildling_cards/hide" }
+    subject { patch "/games/#{game_id}/wildling_cards/hide", headers: headers }
 
     before :each do
       WildlingCard.where(game_id: game_id, position: 1).first.update(status: "revealed")
@@ -112,7 +120,7 @@ RSpec.describe "Wildling Cards" do
   end
 
   context "moving a wildling card to bottom" do
-    subject { patch "/games/#{game_id}/wildling_cards/move_to_bottom" }
+    subject { patch "/games/#{game_id}/wildling_cards/move_to_bottom", headers: headers }
 
     before :each do
       WildlingCard.where(game_id: game_id, position: 1).first.update(status: "revealed")
