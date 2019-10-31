@@ -6,9 +6,9 @@ class OrdersController < ApplicationController
   end
 
   def bulk_update
-    orders = game.orders.where(filter_params)
-    orders.update_all(bulk_update_params.to_hash)
-    rendered = render json: orders
+    @orders = game.orders.where(filter_params)
+    @orders.update_all(bulk_update_params.to_hash)
+    rendered = render json: serialized_orders
     Pusher.trigger("game", "bulk-update", type: "orders", payload: rendered)
   end
 
@@ -32,5 +32,9 @@ class OrdersController < ApplicationController
 
   def filter_params
     params.require(:filter).permit(:house_id)
+  end
+
+  def serialized_orders
+    OrderSerializer.new(@orders).serialized_json
   end
 end
