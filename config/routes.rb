@@ -20,6 +20,7 @@ Rails.application.routes.draw do
         patch :bulk_update, path: "/"
       end
     end
+    patch :combat, to: "combat#update"
     resources :units
     resources :garrison_tokens
     resources :neutral_force_tokens
