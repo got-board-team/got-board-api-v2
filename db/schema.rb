@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_08_175924) do
+ActiveRecord::Schema.define(version: 2019_02_05_215508) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -118,6 +118,25 @@ ActiveRecord::Schema.define(version: 2018_08_08_175924) do
     t.bigint "house_id"
     t.index ["game_id"], name: "index_units_on_game_id"
     t.index ["house_id"], name: "index_units_on_house_id"
+  end
+
+  create_table "westeros_cards", force: :cascade do |t|
+    t.string "title", null: false
+    t.boolean "revealed", default: false, null: false
+    t.integer "position", null: false
+    t.bigint "westeros_deck_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["westeros_deck_id"], name: "index_westeros_cards_on_westeros_deck_id"
+  end
+
+  create_table "westeros_decks", force: :cascade do |t|
+    t.bigint "tier", null: false
+    t.bigint "game_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_westeros_decks_on_game_id"
+    t.index ["tier"], name: "index_westeros_decks_on_tier"
   end
 
   create_table "wildling_cards", force: :cascade do |t|

@@ -3,6 +3,7 @@ class Game < ApplicationRecord
 
   has_many :house_cards
   has_many :wildling_cards, -> { order(position: :asc) }
+  has_many :westeros_decks
 
   has_many :tokens
   has_many :fiefdom_tokens

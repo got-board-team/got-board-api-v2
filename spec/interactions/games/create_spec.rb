@@ -23,5 +23,10 @@ RSpec.describe Games::Create do
       expect(Games::CreateUnits).to receive(:run).and_return(outcome)
       subject
     end
+
+    it "calls CreateWesterosCards" do
+      expect(Games::CreateWesterosCards).to receive(:run).and_return(outcome)
+      subject
+    end
   end
 end
